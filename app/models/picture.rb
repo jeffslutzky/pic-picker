@@ -17,7 +17,7 @@ class Picture < ActiveRecord::Base
   belongs_to :favorite
 
 
-  def pic_scrape
+  def self.pic_scrape
     document = open("http://shinishikawa.com/").read
     noko_document = Nokogiri::HTML(document)
     list_of_images = noko_document.search(".type-image")
