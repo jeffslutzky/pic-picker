@@ -35,3 +35,876 @@ Migrating to Pictures (20151111235932)
   [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151111235932"]]
   [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for ::1 at 2015-11-13 18:24:37 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/hideyukigojima/.rvm/gems/ruby-2.2.0/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (4.9ms)
+Completed 200 OK in 59ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/comparisons" for ::1 at 2015-11-13 18:24:43 -0500
+Processing by ComparisonsController#index as HTML
+  Rendered comparisons/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1344ms (Views: 1343.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/favorites.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-13 18:24:44 -0500
+
+
+Started GET "/assets/pictures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-13 18:24:44 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-13 18:24:44 -0500
+
+
+Started GET "/assets/pictures.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-13 18:24:44 -0500
+
+
+Started GET "/assets/favorites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-13 18:24:44 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-13 18:24:44 -0500
+
+
+Started GET "/comparisons" for ::1 at 2015-11-13 18:26:32 -0500
+Processing by ComparisonsController#index as HTML
+  Rendered comparisons/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 58ms (Views: 57.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comparisons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-13 18:26:32 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-13 18:26:32 -0500
+
+
+Started GET "/assets/pictures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-13 18:26:32 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-13 18:26:32 -0500
+
+
+Started GET "/assets/favorites.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-13 18:26:32 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-13 18:26:32 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-13 18:26:32 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-13 18:26:32 -0500
+
+
+Started GET "/assets/comparisons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-13 18:26:32 -0500
+
+
+Started GET "/assets/favorites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-13 18:26:32 -0500
+
+
+Started GET "/assets/pictures.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-13 18:26:32 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-13 18:26:32 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-13 18:26:32 -0500
+
+
+Started GET "/comparisons" for ::1 at 2015-11-13 18:27:09 -0500
+Processing by ComparisonsController#index as HTML
+  Rendered comparisons/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 60ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comparisons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-13 18:27:09 -0500
+
+
+Started GET "/assets/favorites.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-13 18:27:09 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-13 18:27:09 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-13 18:27:09 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-13 18:27:09 -0500
+
+
+Started GET "/assets/pictures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-13 18:27:09 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-13 18:27:09 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-13 18:27:09 -0500
+
+
+Started GET "/assets/comparisons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-13 18:27:09 -0500
+
+
+Started GET "/assets/favorites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-13 18:27:09 -0500
+
+
+Started GET "/assets/pictures.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-13 18:27:09 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-13 18:27:09 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-13 18:27:09 -0500
+
+
+Started GET "/comparisons" for ::1 at 2015-11-13 18:27:33 -0500
+Processing by ComparisonsController#index as HTML
+  Rendered comparisons/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 47ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comparisons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-13 18:27:33 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-13 18:27:33 -0500
+
+
+Started GET "/assets/favorites.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-13 18:27:33 -0500
+
+
+Started GET "/assets/pictures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-13 18:27:33 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-13 18:27:33 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-13 18:27:33 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-13 18:27:33 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-13 18:27:33 -0500
+
+
+Started GET "/assets/comparisons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-13 18:27:33 -0500
+
+
+Started GET "/assets/favorites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-13 18:27:33 -0500
+
+
+Started GET "/assets/pictures.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-13 18:27:33 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-13 18:27:33 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-13 18:27:33 -0500
+
+
+Started GET "/comparisons" for ::1 at 2015-11-13 18:27:41 -0500
+Processing by ComparisonsController#index as HTML
+  Rendered comparisons/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 45ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comparisons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-13 18:27:41 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-13 18:27:41 -0500
+
+
+Started GET "/assets/favorites.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-13 18:27:41 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-13 18:27:41 -0500
+
+
+Started GET "/assets/pictures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-13 18:27:41 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-13 18:27:41 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-13 18:27:41 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-13 18:27:41 -0500
+
+
+Started GET "/assets/comparisons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-13 18:27:41 -0500
+
+
+Started GET "/assets/favorites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-13 18:27:41 -0500
+
+
+Started GET "/assets/pictures.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-13 18:27:41 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-13 18:27:41 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-13 18:27:41 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1913.jpg"], ["created_at", "2015-11-13 23:39:22.834194"], ["updated_at", "2015-11-13 23:39:22.834194"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2380.jpg"], ["created_at", "2015-11-13 23:39:22.849566"], ["updated_at", "2015-11-13 23:39:22.849566"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE3556.jpg"], ["created_at", "2015-11-13 23:39:22.852135"], ["updated_at", "2015-11-13 23:39:22.852135"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE3656.jpg"], ["created_at", "2015-11-13 23:39:22.854629"], ["updated_at", "2015-11-13 23:39:22.854629"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE3305.jpg"], ["created_at", "2015-11-13 23:39:22.856989"], ["updated_at", "2015-11-13 23:39:22.856989"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/6SIN0014.jpg"], ["created_at", "2015-11-13 23:39:22.859690"], ["updated_at", "2015-11-13 23:39:22.859690"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2513.jpg"], ["created_at", "2015-11-13 23:39:22.862489"], ["updated_at", "2015-11-13 23:39:22.862489"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE0962.jpg"], ["created_at", "2015-11-13 23:39:22.864799"], ["updated_at", "2015-11-13 23:39:22.864799"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1305.jpg"], ["created_at", "2015-11-13 23:39:22.867313"], ["updated_at", "2015-11-13 23:39:22.867313"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE3590.jpg"], ["created_at", "2015-11-13 23:39:22.869774"], ["updated_at", "2015-11-13 23:39:22.869774"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2573.jpg"], ["created_at", "2015-11-13 23:39:22.872421"], ["updated_at", "2015-11-13 23:39:22.872421"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE0813.jpg"], ["created_at", "2015-11-13 23:39:22.874679"], ["updated_at", "2015-11-13 23:39:22.874679"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE3970.jpg"], ["created_at", "2015-11-13 23:39:22.876988"], ["updated_at", "2015-11-13 23:39:22.876988"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE7221.jpg"], ["created_at", "2015-11-13 23:39:22.879333"], ["updated_at", "2015-11-13 23:39:22.879333"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE3337.jpg"], ["created_at", "2015-11-13 23:39:22.882080"], ["updated_at", "2015-11-13 23:39:22.882080"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE3763.jpg"], ["created_at", "2015-11-13 23:39:22.884594"], ["updated_at", "2015-11-13 23:39:22.884594"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2499.jpg"], ["created_at", "2015-11-13 23:39:22.886998"], ["updated_at", "2015-11-13 23:39:22.886998"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE3577.jpg"], ["created_at", "2015-11-13 23:39:22.889867"], ["updated_at", "2015-11-13 23:39:22.889867"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2799.jpg"], ["created_at", "2015-11-13 23:39:22.892304"], ["updated_at", "2015-11-13 23:39:22.892304"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/6SIN0218.jpg"], ["created_at", "2015-11-13 23:39:22.894606"], ["updated_at", "2015-11-13 23:39:22.894606"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2225.jpg"], ["created_at", "2015-11-13 23:39:22.896863"], ["updated_at", "2015-11-13 23:39:22.896863"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1936.jpg"], ["created_at", "2015-11-13 23:39:22.899499"], ["updated_at", "2015-11-13 23:39:22.899499"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE7280.jpg"], ["created_at", "2015-11-13 23:39:22.901821"], ["updated_at", "2015-11-13 23:39:22.901821"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE9510.jpg"], ["created_at", "2015-11-13 23:39:22.904310"], ["updated_at", "2015-11-13 23:39:22.904310"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE6284.jpg"], ["created_at", "2015-11-13 23:39:22.906639"], ["updated_at", "2015-11-13 23:39:22.906639"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE4081.jpg"], ["created_at", "2015-11-13 23:39:22.909028"], ["updated_at", "2015-11-13 23:39:22.909028"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/6SIN9577.jpg"], ["created_at", "2015-11-13 23:39:22.911301"], ["updated_at", "2015-11-13 23:39:22.911301"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/6SIN99101.jpg"], ["created_at", "2015-11-13 23:39:22.913488"], ["updated_at", "2015-11-13 23:39:22.913488"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE3186.jpg"], ["created_at", "2015-11-13 23:39:22.916353"], ["updated_at", "2015-11-13 23:39:22.916353"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE7083.jpg"], ["created_at", "2015-11-13 23:39:22.918662"], ["updated_at", "2015-11-13 23:39:22.918662"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE8474.jpg"], ["created_at", "2015-11-13 23:39:22.920741"], ["updated_at", "2015-11-13 23:39:22.920741"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE6601.jpg"], ["created_at", "2015-11-13 23:39:22.922830"], ["updated_at", "2015-11-13 23:39:22.922830"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE6608.jpg"], ["created_at", "2015-11-13 23:39:22.925045"], ["updated_at", "2015-11-13 23:39:22.925045"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2455.jpg"], ["created_at", "2015-11-13 23:39:22.927291"], ["updated_at", "2015-11-13 23:39:22.927291"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/6SIN9517.jpg"], ["created_at", "2015-11-13 23:39:22.929439"], ["updated_at", "2015-11-13 23:39:22.929439"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE9403.jpg"], ["created_at", "2015-11-13 23:39:22.931568"], ["updated_at", "2015-11-13 23:39:22.931568"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE6682.jpg"], ["created_at", "2015-11-13 23:39:22.933669"], ["updated_at", "2015-11-13 23:39:22.933669"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE8104.jpg"], ["created_at", "2015-11-13 23:39:22.935917"], ["updated_at", "2015-11-13 23:39:22.935917"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2663.jpg"], ["created_at", "2015-11-13 23:39:22.938252"], ["updated_at", "2015-11-13 23:39:22.938252"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2494.jpg"], ["created_at", "2015-11-13 23:39:22.940983"], ["updated_at", "2015-11-13 23:39:22.940983"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE3460.jpg"], ["created_at", "2015-11-13 23:39:22.943379"], ["updated_at", "2015-11-13 23:39:22.943379"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE4770.jpg"], ["created_at", "2015-11-13 23:39:22.945994"], ["updated_at", "2015-11-13 23:39:22.945994"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE3780.jpg"], ["created_at", "2015-11-13 23:39:22.948380"], ["updated_at", "2015-11-13 23:39:22.948380"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2915.jpg"], ["created_at", "2015-11-13 23:39:22.950525"], ["updated_at", "2015-11-13 23:39:22.950525"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2250.jpg"], ["created_at", "2015-11-13 23:39:22.952559"], ["updated_at", "2015-11-13 23:39:22.952559"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE3859.jpg"], ["created_at", "2015-11-13 23:39:22.954570"], ["updated_at", "2015-11-13 23:39:22.954570"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE4734.jpg"], ["created_at", "2015-11-13 23:39:22.956770"], ["updated_at", "2015-11-13 23:39:22.956770"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/6SIN0512.jpg"], ["created_at", "2015-11-13 23:39:22.958840"], ["updated_at", "2015-11-13 23:39:22.958840"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE6358.jpg"], ["created_at", "2015-11-13 23:39:22.960945"], ["updated_at", "2015-11-13 23:39:22.960945"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2013.jpg"], ["created_at", "2015-11-13 23:39:22.963374"], ["updated_at", "2015-11-13 23:39:22.963374"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/6SIN0145.jpg"], ["created_at", "2015-11-13 23:39:22.965429"], ["updated_at", "2015-11-13 23:39:22.965429"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE4034.jpg"], ["created_at", "2015-11-13 23:39:22.967582"], ["updated_at", "2015-11-13 23:39:22.967582"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE4046.jpg"], ["created_at", "2015-11-13 23:39:22.969426"], ["updated_at", "2015-11-13 23:39:22.969426"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE4637.jpg"], ["created_at", "2015-11-13 23:39:22.971649"], ["updated_at", "2015-11-13 23:39:22.971649"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/6SIN0588.jpg"], ["created_at", "2015-11-13 23:39:22.973747"], ["updated_at", "2015-11-13 23:39:22.973747"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/6SIN0610.jpg"], ["created_at", "2015-11-13 23:39:22.975717"], ["updated_at", "2015-11-13 23:39:22.975717"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1008.jpg"], ["created_at", "2015-11-13 23:39:22.977695"], ["updated_at", "2015-11-13 23:39:22.977695"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/6SIN9308.jpg"], ["created_at", "2015-11-13 23:39:22.990106"], ["updated_at", "2015-11-13 23:39:22.990106"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/6SIN9444.jpg"], ["created_at", "2015-11-13 23:39:22.992456"], ["updated_at", "2015-11-13 23:39:22.992456"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE3851.jpg"], ["created_at", "2015-11-13 23:39:22.994574"], ["updated_at", "2015-11-13 23:39:22.994574"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE3593.jpg"], ["created_at", "2015-11-13 23:39:22.996596"], ["updated_at", "2015-11-13 23:39:22.996596"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE5898.jpg"], ["created_at", "2015-11-13 23:39:22.998670"], ["updated_at", "2015-11-13 23:39:22.998670"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE6189.jpg"], ["created_at", "2015-11-13 23:39:23.000835"], ["updated_at", "2015-11-13 23:39:23.000835"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE3723.jpg"], ["created_at", "2015-11-13 23:39:23.002946"], ["updated_at", "2015-11-13 23:39:23.002946"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2222.jpg"], ["created_at", "2015-11-13 23:39:23.004877"], ["updated_at", "2015-11-13 23:39:23.004877"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE3641.jpg"], ["created_at", "2015-11-13 23:39:23.006807"], ["updated_at", "2015-11-13 23:39:23.006807"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2352.jpg"], ["created_at", "2015-11-13 23:39:23.008786"], ["updated_at", "2015-11-13 23:39:23.008786"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2403.jpg"], ["created_at", "2015-11-13 23:39:23.011033"], ["updated_at", "2015-11-13 23:39:23.011033"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2599.jpg"], ["created_at", "2015-11-13 23:39:23.013124"], ["updated_at", "2015-11-13 23:39:23.013124"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE8666.jpg"], ["created_at", "2015-11-13 23:39:23.015131"], ["updated_at", "2015-11-13 23:39:23.015131"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE9025.jpg"], ["created_at", "2015-11-13 23:39:23.017285"], ["updated_at", "2015-11-13 23:39:23.017285"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE4894.jpg"], ["created_at", "2015-11-13 23:39:23.019281"], ["updated_at", "2015-11-13 23:39:23.019281"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE6414.jpg"], ["created_at", "2015-11-13 23:39:23.021475"], ["updated_at", "2015-11-13 23:39:23.021475"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE5213.jpg"], ["created_at", "2015-11-13 23:39:23.023654"], ["updated_at", "2015-11-13 23:39:23.023654"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE3745.jpg"], ["created_at", "2015-11-13 23:39:23.025584"], ["updated_at", "2015-11-13 23:39:23.025584"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE6190.jpg"], ["created_at", "2015-11-13 23:39:23.027609"], ["updated_at", "2015-11-13 23:39:23.027609"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE4378.jpg"], ["created_at", "2015-11-13 23:39:23.029514"], ["updated_at", "2015-11-13 23:39:23.029514"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE4455.jpg"], ["created_at", "2015-11-13 23:39:23.031447"], ["updated_at", "2015-11-13 23:39:23.031447"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE4075.jpg"], ["created_at", "2015-11-13 23:39:23.033813"], ["updated_at", "2015-11-13 23:39:23.033813"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE3890.jpg"], ["created_at", "2015-11-13 23:39:23.036115"], ["updated_at", "2015-11-13 23:39:23.036115"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2645.jpg"], ["created_at", "2015-11-13 23:39:23.038126"], ["updated_at", "2015-11-13 23:39:23.038126"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE3010.jpg"], ["created_at", "2015-11-13 23:39:23.040234"], ["updated_at", "2015-11-13 23:39:23.040234"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2335.jpg"], ["created_at", "2015-11-13 23:39:23.042105"], ["updated_at", "2015-11-13 23:39:23.042105"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE4084.jpg"], ["created_at", "2015-11-13 23:39:23.044144"], ["updated_at", "2015-11-13 23:39:23.044144"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE4140.jpg"], ["created_at", "2015-11-13 23:39:23.046362"], ["updated_at", "2015-11-13 23:39:23.046362"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2736.jpg"], ["created_at", "2015-11-13 23:39:23.048487"], ["updated_at", "2015-11-13 23:39:23.048487"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2606.jpg"], ["created_at", "2015-11-13 23:39:23.050608"], ["updated_at", "2015-11-13 23:39:23.050608"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2758.jpg"], ["created_at", "2015-11-13 23:39:23.052621"], ["updated_at", "2015-11-13 23:39:23.052621"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE0574.jpg"], ["created_at", "2015-11-13 23:39:23.054616"], ["updated_at", "2015-11-13 23:39:23.054616"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1947.jpg"], ["created_at", "2015-11-13 23:39:23.056831"], ["updated_at", "2015-11-13 23:39:23.056831"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE5446.jpg"], ["created_at", "2015-11-13 23:39:23.058767"], ["updated_at", "2015-11-13 23:39:23.058767"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE7643.jpg"], ["created_at", "2015-11-13 23:39:23.060608"], ["updated_at", "2015-11-13 23:39:23.060608"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1308.jpg"], ["created_at", "2015-11-13 23:39:23.062505"], ["updated_at", "2015-11-13 23:39:23.062505"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE7070.jpg"], ["created_at", "2015-11-13 23:39:23.064926"], ["updated_at", "2015-11-13 23:39:23.064926"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1504.jpg"], ["created_at", "2015-11-13 23:39:23.067570"], ["updated_at", "2015-11-13 23:39:23.067570"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1867.jpg"], ["created_at", "2015-11-13 23:39:23.069740"], ["updated_at", "2015-11-13 23:39:23.069740"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1533.jpg"], ["created_at", "2015-11-13 23:39:23.071879"], ["updated_at", "2015-11-13 23:39:23.071879"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE0582.jpg"], ["created_at", "2015-11-13 23:39:23.074084"], ["updated_at", "2015-11-13 23:39:23.074084"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE7414.jpg"], ["created_at", "2015-11-13 23:39:23.076066"], ["updated_at", "2015-11-13 23:39:23.076066"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE4763.jpg"], ["created_at", "2015-11-13 23:39:23.078017"], ["updated_at", "2015-11-13 23:39:23.078017"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1238.jpg"], ["created_at", "2015-11-13 23:39:23.080023"], ["updated_at", "2015-11-13 23:39:23.080023"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE4961.jpg"], ["created_at", "2015-11-13 23:39:23.082105"], ["updated_at", "2015-11-13 23:39:23.082105"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE7589.jpg"], ["created_at", "2015-11-13 23:39:23.084260"], ["updated_at", "2015-11-13 23:39:23.084260"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1741.jpg"], ["created_at", "2015-11-13 23:39:23.086413"], ["updated_at", "2015-11-13 23:39:23.086413"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1639.jpg"], ["created_at", "2015-11-13 23:39:23.088687"], ["updated_at", "2015-11-13 23:39:23.088687"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE5622.jpg"], ["created_at", "2015-11-13 23:39:23.090745"], ["updated_at", "2015-11-13 23:39:23.090745"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE13721.jpg"], ["created_at", "2015-11-13 23:39:23.092916"], ["updated_at", "2015-11-13 23:39:23.092916"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE7250.jpg"], ["created_at", "2015-11-13 23:39:23.094874"], ["updated_at", "2015-11-13 23:39:23.094874"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1964.jpg"], ["created_at", "2015-11-13 23:39:23.096757"], ["updated_at", "2015-11-13 23:39:23.096757"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/MG_1130.jpg"], ["created_at", "2015-11-13 23:39:23.099303"], ["updated_at", "2015-11-13 23:39:23.099303"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE9935.jpg"], ["created_at", "2015-11-13 23:39:23.101471"], ["updated_at", "2015-11-13 23:39:23.101471"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE6773.jpg"], ["created_at", "2015-11-13 23:39:23.103453"], ["updated_at", "2015-11-13 23:39:23.103453"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE5800.jpg"], ["created_at", "2015-11-13 23:39:23.105434"], ["updated_at", "2015-11-13 23:39:23.105434"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE6785.jpg"], ["created_at", "2015-11-13 23:39:23.107315"], ["updated_at", "2015-11-13 23:39:23.107315"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2154.jpg"], ["created_at", "2015-11-13 23:39:23.109477"], ["updated_at", "2015-11-13 23:39:23.109477"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1291.jpg"], ["created_at", "2015-11-13 23:39:23.111749"], ["updated_at", "2015-11-13 23:39:23.111749"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1134.jpg"], ["created_at", "2015-11-13 23:39:23.113538"], ["updated_at", "2015-11-13 23:39:23.113538"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1917.jpg"], ["created_at", "2015-11-13 23:39:23.115514"], ["updated_at", "2015-11-13 23:39:23.115514"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1710.jpg"], ["created_at", "2015-11-13 23:39:23.117411"], ["updated_at", "2015-11-13 23:39:23.117411"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1262.jpg"], ["created_at", "2015-11-13 23:39:23.119232"], ["updated_at", "2015-11-13 23:39:23.119232"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE8034.jpg"], ["created_at", "2015-11-13 23:39:23.121424"], ["updated_at", "2015-11-13 23:39:23.121424"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1526.jpg"], ["created_at", "2015-11-13 23:39:23.123629"], ["updated_at", "2015-11-13 23:39:23.123629"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1932.jpg"], ["created_at", "2015-11-13 23:39:23.125622"], ["updated_at", "2015-11-13 23:39:23.125622"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE7261.jpg"], ["created_at", "2015-11-13 23:39:23.127557"], ["updated_at", "2015-11-13 23:39:23.127557"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1022.jpg"], ["created_at", "2015-11-13 23:39:23.129321"], ["updated_at", "2015-11-13 23:39:23.129321"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1444.jpg"], ["created_at", "2015-11-13 23:39:23.131076"], ["updated_at", "2015-11-13 23:39:23.131076"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/MG_1254.jpg"], ["created_at", "2015-11-13 23:39:23.133199"], ["updated_at", "2015-11-13 23:39:23.133199"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE8089.jpg"], ["created_at", "2015-11-13 23:39:23.135273"], ["updated_at", "2015-11-13 23:39:23.135273"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/kae-1185.jpg"], ["created_at", "2015-11-13 23:39:23.137130"], ["updated_at", "2015-11-13 23:39:23.137130"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1104.jpg"], ["created_at", "2015-11-13 23:39:23.139069"], ["updated_at", "2015-11-13 23:39:23.139069"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2082.jpg"], ["created_at", "2015-11-13 23:39:23.140888"], ["updated_at", "2015-11-13 23:39:23.140888"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE6715.jpg"], ["created_at", "2015-11-13 23:39:23.142507"], ["updated_at", "2015-11-13 23:39:23.142507"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE6233.jpg"], ["created_at", "2015-11-13 23:39:23.144726"], ["updated_at", "2015-11-13 23:39:23.144726"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE7937.jpg"], ["created_at", "2015-11-13 23:39:23.146726"], ["updated_at", "2015-11-13 23:39:23.146726"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE0704.jpg"], ["created_at", "2015-11-13 23:39:23.148586"], ["updated_at", "2015-11-13 23:39:23.148586"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE7006.jpg"], ["created_at", "2015-11-13 23:39:23.150449"], ["updated_at", "2015-11-13 23:39:23.150449"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE6952.jpg"], ["created_at", "2015-11-13 23:39:23.152336"], ["updated_at", "2015-11-13 23:39:23.152336"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1675.jpg"], ["created_at", "2015-11-13 23:39:23.154174"], ["updated_at", "2015-11-13 23:39:23.154174"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1772.jpg"], ["created_at", "2015-11-13 23:39:23.156504"], ["updated_at", "2015-11-13 23:39:23.156504"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/kae-1299.jpg"], ["created_at", "2015-11-13 23:39:23.158571"], ["updated_at", "2015-11-13 23:39:23.158571"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1142.jpg"], ["created_at", "2015-11-13 23:39:23.160622"], ["updated_at", "2015-11-13 23:39:23.160622"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/kae-825.jpg"], ["created_at", "2015-11-13 23:39:23.162718"], ["updated_at", "2015-11-13 23:39:23.162718"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2208.jpg"], ["created_at", "2015-11-13 23:39:23.164714"], ["updated_at", "2015-11-13 23:39:23.164714"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2101.jpg"], ["created_at", "2015-11-13 23:39:23.167202"], ["updated_at", "2015-11-13 23:39:23.167202"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1605.jpg"], ["created_at", "2015-11-13 23:39:23.169833"], ["updated_at", "2015-11-13 23:39:23.169833"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2753.jpg"], ["created_at", "2015-11-13 23:39:23.171957"], ["updated_at", "2015-11-13 23:39:23.171957"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/kae-1422.jpg"], ["created_at", "2015-11-13 23:39:23.174055"], ["updated_at", "2015-11-13 23:39:23.174055"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE5193.jpg"], ["created_at", "2015-11-13 23:39:23.175899"], ["updated_at", "2015-11-13 23:39:23.175899"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE-5846.jpg"], ["created_at", "2015-11-13 23:39:23.177838"], ["updated_at", "2015-11-13 23:39:23.177838"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2365.jpg"], ["created_at", "2015-11-13 23:39:23.180161"], ["updated_at", "2015-11-13 23:39:23.180161"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE5939.jpg"], ["created_at", "2015-11-13 23:39:23.182597"], ["updated_at", "2015-11-13 23:39:23.182597"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2348.jpg"], ["created_at", "2015-11-13 23:39:23.184599"], ["updated_at", "2015-11-13 23:39:23.184599"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2693.jpg"], ["created_at", "2015-11-13 23:39:23.186523"], ["updated_at", "2015-11-13 23:39:23.186523"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE8641.jpg"], ["created_at", "2015-11-13 23:39:23.188444"], ["updated_at", "2015-11-13 23:39:23.188444"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2775.jpg"], ["created_at", "2015-11-13 23:39:23.190641"], ["updated_at", "2015-11-13 23:39:23.190641"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1730.jpg"], ["created_at", "2015-11-13 23:39:23.192643"], ["updated_at", "2015-11-13 23:39:23.192643"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE02241.jpg"], ["created_at", "2015-11-13 23:39:23.194541"], ["updated_at", "2015-11-13 23:39:23.194541"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE9359.jpg"], ["created_at", "2015-11-13 23:39:23.196355"], ["updated_at", "2015-11-13 23:39:23.196355"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE0691.jpg"], ["created_at", "2015-11-13 23:39:23.198941"], ["updated_at", "2015-11-13 23:39:23.198941"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1728.jpg"], ["created_at", "2015-11-13 23:39:23.201239"], ["updated_at", "2015-11-13 23:39:23.201239"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE0655.jpg"], ["created_at", "2015-11-13 23:39:23.203319"], ["updated_at", "2015-11-13 23:39:23.203319"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE7777.jpg"], ["created_at", "2015-11-13 23:39:23.205172"], ["updated_at", "2015-11-13 23:39:23.205172"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE7363.jpg"], ["created_at", "2015-11-13 23:39:23.206884"], ["updated_at", "2015-11-13 23:39:23.206884"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE0398.jpg"], ["created_at", "2015-11-13 23:39:23.209209"], ["updated_at", "2015-11-13 23:39:23.209209"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1511.jpg"], ["created_at", "2015-11-13 23:39:23.211177"], ["updated_at", "2015-11-13 23:39:23.211177"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE7656.jpg"], ["created_at", "2015-11-13 23:39:23.213158"], ["updated_at", "2015-11-13 23:39:23.213158"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/MG_1307.jpg"], ["created_at", "2015-11-13 23:39:23.215194"], ["updated_at", "2015-11-13 23:39:23.215194"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE7517.jpg"], ["created_at", "2015-11-13 23:39:23.217147"], ["updated_at", "2015-11-13 23:39:23.217147"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE0095.jpg"], ["created_at", "2015-11-13 23:39:23.219374"], ["updated_at", "2015-11-13 23:39:23.219374"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE9309.jpg"], ["created_at", "2015-11-13 23:39:23.221801"], ["updated_at", "2015-11-13 23:39:23.221801"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1513.jpg"], ["created_at", "2015-11-13 23:39:23.223758"], ["updated_at", "2015-11-13 23:39:23.223758"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE0519.jpg"], ["created_at", "2015-11-13 23:39:23.225852"], ["updated_at", "2015-11-13 23:39:23.225852"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2104.jpg"], ["created_at", "2015-11-13 23:39:23.227678"], ["updated_at", "2015-11-13 23:39:23.227678"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2301.jpg"], ["created_at", "2015-11-13 23:39:23.229645"], ["updated_at", "2015-11-13 23:39:23.229645"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE4991.jpg"], ["created_at", "2015-11-13 23:39:23.232120"], ["updated_at", "2015-11-13 23:39:23.232120"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE02301.jpg"], ["created_at", "2015-11-13 23:39:23.234153"], ["updated_at", "2015-11-13 23:39:23.234153"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE8513.jpg"], ["created_at", "2015-11-13 23:39:23.236027"], ["updated_at", "2015-11-13 23:39:23.236027"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE0854.jpg"], ["created_at", "2015-11-13 23:39:23.238205"], ["updated_at", "2015-11-13 23:39:23.238205"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1395.jpg"], ["created_at", "2015-11-13 23:39:23.240273"], ["updated_at", "2015-11-13 23:39:23.240273"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE6437.jpg"], ["created_at", "2015-11-13 23:39:23.242445"], ["updated_at", "2015-11-13 23:39:23.242445"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE0138.jpg"], ["created_at", "2015-11-13 23:39:23.244509"], ["updated_at", "2015-11-13 23:39:23.244509"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE70821.jpg"], ["created_at", "2015-11-13 23:39:23.246534"], ["updated_at", "2015-11-13 23:39:23.246534"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE0078.jpg"], ["created_at", "2015-11-13 23:39:23.248524"], ["updated_at", "2015-11-13 23:39:23.248524"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1183.jpg"], ["created_at", "2015-11-13 23:39:23.250704"], ["updated_at", "2015-11-13 23:39:23.250704"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1239.jpg"], ["created_at", "2015-11-13 23:39:23.252925"], ["updated_at", "2015-11-13 23:39:23.252925"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE0766.jpg"], ["created_at", "2015-11-13 23:39:23.255058"], ["updated_at", "2015-11-13 23:39:23.255058"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE1459.jpg"], ["created_at", "2015-11-13 23:39:23.256970"], ["updated_at", "2015-11-13 23:39:23.256970"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE8660.jpg"], ["created_at", "2015-11-13 23:39:23.258840"], ["updated_at", "2015-11-13 23:39:23.258840"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE0347.jpg"], ["created_at", "2015-11-13 23:39:23.261218"], ["updated_at", "2015-11-13 23:39:23.261218"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE8564.jpg"], ["created_at", "2015-11-13 23:39:23.263274"], ["updated_at", "2015-11-13 23:39:23.263274"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE6294.jpg"], ["created_at", "2015-11-13 23:39:23.265153"], ["updated_at", "2015-11-13 23:39:23.265153"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/kae-747.jpg"], ["created_at", "2015-11-13 23:39:23.267298"], ["updated_at", "2015-11-13 23:39:23.267298"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE7925.jpg"], ["created_at", "2015-11-13 23:39:23.269255"], ["updated_at", "2015-11-13 23:39:23.269255"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE6588.jpg"], ["created_at", "2015-11-13 23:39:23.271634"], ["updated_at", "2015-11-13 23:39:23.271634"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE5786.jpg"], ["created_at", "2015-11-13 23:39:23.274471"], ["updated_at", "2015-11-13 23:39:23.274471"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE5305.jpg"], ["created_at", "2015-11-13 23:39:23.276520"], ["updated_at", "2015-11-13 23:39:23.276520"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE5332.jpg"], ["created_at", "2015-11-13 23:39:23.278640"], ["updated_at", "2015-11-13 23:39:23.278640"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE5101.jpg"], ["created_at", "2015-11-13 23:39:23.280771"], ["updated_at", "2015-11-13 23:39:23.280771"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE4963.jpg"], ["created_at", "2015-11-13 23:39:23.283492"], ["updated_at", "2015-11-13 23:39:23.283492"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pictures" ("photo_url", "created_at", "updated_at") VALUES (?, ?, ?)  [["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/Screen-Shot-2015-08-31-at-5.43.46-PM.png"], ["created_at", "2015-11-13 23:39:23.285766"], ["updated_at", "2015-11-13 23:39:23.285766"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[36mPicture Load (1.7ms)[0m  [1mSELECT "pictures".* FROM "pictures"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pictures"
+  [1m[36mPicture Load (4.6ms)[0m  [1mSELECT "pictures".* FROM "pictures"[0m
+
+
+Started GET "/" for ::1 at 2015-11-13 18:52:45 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/hideyukigojima/.rvm/gems/ruby-2.2.0/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concretes/new" for ::1 at 2015-11-13 18:52:48 -0500
+
+ActionController::RoutingError (No route matches [GET] "/concretes/new"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/hideyukigojima/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/hideyukigojima/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/hideyukigojima/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/hideyukigojima/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/hideyukigojima/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/hideyukigojima/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (23.9ms)
+  Rendered /Users/hideyukigojima/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/hideyukigojima/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (133.7ms)
+  Rendered /Users/hideyukigojima/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/hideyukigojima/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hideyukigojima/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hideyukigojima/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/hideyukigojima/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (48.4ms)
+  Rendered /Users/hideyukigojima/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hideyukigojima/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/hideyukigojima/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (132.9ms)
+
+
+Started GET "/comparisons" for ::1 at 2015-11-13 18:52:52 -0500
+Processing by ComparisonsController#index as HTML
+  Rendered comparisons/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 45ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+  [1m[36mPicture Load (1.9ms)[0m  [1mSELECT "pictures".* FROM "pictures"[0m
+  [1m[36mPicture Load (2.1ms)[0m  [1mSELECT "pictures".* FROM "pictures"[0m
