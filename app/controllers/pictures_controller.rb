@@ -1,20 +1,19 @@
 class PicturesController < ApplicationController
+   
 
   def index
+    comparison = Comparison.find(params[:id])
     session_pics ||= Picture.session_pics
-    two_pics = Picture.pic_picker(session_pics)
-    
-    if two_pics 
-      # pic_chosen = Picture.find(params[:id])
-      #delete the picture that was not chosen
-      @two_pics = two_pics
-      # binding.pry
-      render 'index'
-    else
-      @two_pics = Picture.pic_picker(session_pics)
-      render 'index'
-    end
+    comparison.associate(session_pics)
+    @selected_pics = comparison.pic_picker(session_pics)
+    render 'index'
   end
+
+  private 
+  def picture_params
+    params.require(:picture).permit(:photo_url)
+  end
+
 
 
 

@@ -15,7 +15,7 @@ require 'pry'
 
 class Picture < ActiveRecord::Base
   belongs_to :favorite
-
+  belongs_to :comparison
 
   def self.pic_scrape
     document = open("http://shinishikawa.com/").read
@@ -35,17 +35,23 @@ class Picture < ActiveRecord::Base
 
 
   def self.pic_picker(session_pics)
-    two_pics ||= []
-        if session_pics.length == 10
-          pic1 = session_pics.pop
-          pic2 = session_pics.pop
-          two_pics << pic1
-          two_pics << pic2
-        else
-          pic = session_pics.pop
-          two_pics << pic
-        end
-    two_pics
-    end
-    
+
+
+
+
+
+
+    # two_pics ||= []
+    #     if session_pics.length == 10
+    #       pic1 = session_pics.pop
+    #       pic2 = session_pics.pop
+    #       two_pics << pic1
+    #       two_pics << pic2
+    #     else
+    #       pic = session_pics.pop
+    #       two_pics << pic
+    #     end
+    # two_pics
+    # end
   end
+end
