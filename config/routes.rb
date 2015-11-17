@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-
+  root 'pictures#index'
   resources :comparisons
 
   # The priority is based upon order of creation: first created -> highest priority.
