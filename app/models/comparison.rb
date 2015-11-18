@@ -13,6 +13,7 @@ class Comparison < ActiveRecord::Base
   def associate(session_pics)
     session_pics.each do |pic|
       pic.comparison = self
+      pic.save
     end
   end
 

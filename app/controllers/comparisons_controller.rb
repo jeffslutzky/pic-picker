@@ -3,19 +3,22 @@ class ComparisonsController < ApplicationController
   def index
     @comparison = Comparison.create
     render 'index'
-    #invoke another method to select 10 pics and randomize them. 
-    #render index view to compare 2 pictures
-    #keep running until all of the pictures are compared
   end
 
   def create
+    comparison = Comparison.find(params[:comparison_id])
+    session_pics = comparison.pictures
+    if  params[:id] == params['id1']
+      @picture_chosen = Picture.find(params['id1'])
+      picture_not_chosen = Picture.find(params['id2'])
+    else
+      @picture_chosen = Picture.find(params['id2'])
+      picture_not_chosen = Picture.find(params['id1'])
+    end
     binding.pry
-    picture_not_chosen = Picture.find(params[picture_id])
-    picture_not_chosen.destroy
-    comparison = Comparison.find(params[comparison_id])
-    comparison.pictures.count 
-    #show the best picture
-    #let the user click "Send" and the pic is sent to your e-mail address.
+    session_pics.delete(picture_not_chosen) 
+    @second_pic = comparison.pic_picker(session_pics)
+    #render partial
   end
 
 
