@@ -1,0 +1,23 @@
+
+<h2>Picture(second)</h2>
+
+
+<%=form_tag(comparisons_path) do %>
+<img src="<%=@picture_chosen.photo_url%>" style="width:304px;">
+<%= radio_button_tag :id, @picture_chosen.id  %>
+<%=label_tag(:id, "Like it better")%>
+<img src="<%=@second_pic.photo_url%>" style="width:304px;">
+
+<%= radio_button_tag :id, @second_pic.id %>
+<%=label_tag(:id, "Like it better")%>
+
+<%= hidden_field_tag 'comparison_id', @picture_chosen.comparison_id %>
+<%= hidden_field_tag 'id1', @picture_chosen.id %>
+<%= hidden_field_tag 'id2', @second_pic.id %>
+
+<div>
+
+<%=submit_tag("Pick")%>
+</div>
+
+<%end%>

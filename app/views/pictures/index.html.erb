@@ -1,18 +1,16 @@
-<!DOCTYPE html>
-<html>
-<body>
 
-<h2>picture</h2>
+<h2>Picture</h2>
 
 
 <%=form_tag(comparisons_path) do %>
 <img src="<%=@selected_pics[0].photo_url%>" style="width:304px;">
 <%= radio_button_tag :id, @selected_pics[0].id  %>
-<%=label_tag(:id, "I'm the winner")%>
+<%=label_tag(:id, "Like it better")%>
 <img src="<%=@selected_pics[1].photo_url%>" style="width:304px;">
 
 <%= radio_button_tag :id, @selected_pics[1].id %>
-<%=label_tag(:id, "I'm the winner")%>
+<%=label_tag(:id, "Like it better")%>
+
 <%= hidden_field_tag 'comparison_id', @selected_pics[0].comparison_id %>
 <%= hidden_field_tag 'id1', @selected_pics[0].id %>
 <%= hidden_field_tag 'id2', @selected_pics[1].id %>
@@ -22,8 +20,5 @@
 <%=submit_tag("Pick")%>
 </div>
 
-
 <%end%>
 
-</body>
-</html>

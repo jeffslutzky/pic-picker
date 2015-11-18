@@ -17,20 +17,18 @@ class Comparison < ActiveRecord::Base
     end
   end
 
-
-
   def pic_picker(session_pics)
-    selected_pics = []
+    selected_pics ||= []
     if session_pics.length == 10
       selected_1 = session_pics.pop
       selected_2 = session_pics.pop
       selected_pics << selected_1
       selected_pics << selected_2
     else
-      selected_1 = session_pics.pop
-      selected_pics << selected_1
+      selected_3 = session_pics.shuffle.pop
+      selected_pics << selected_3
     end
-    selected_pics
+    selected_pics  
   end
 
 

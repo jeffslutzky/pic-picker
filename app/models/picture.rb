@@ -34,24 +34,4 @@ class Picture < ActiveRecord::Base
   end
 
 
-  def self.pic_picker(session_pics)
-
-
-
-
-
-
-    # two_pics ||= []
-    #     if session_pics.length == 10
-    #       pic1 = session_pics.pop
-    #       pic2 = session_pics.pop
-    #       two_pics << pic1
-    #       two_pics << pic2
-    #     else
-    #       pic = session_pics.pop
-    #       two_pics << pic
-    #     end
-    # two_pics
-    # end
-  end
 end

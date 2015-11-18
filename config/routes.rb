@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   root 'comparisons#index'
+  get 'comparisons/result', to: "comparisons#result"
   resources :comparisons
   resources :pictures
 

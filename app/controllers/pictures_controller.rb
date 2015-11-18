@@ -9,6 +9,7 @@ class PicturesController < ApplicationController
     render 'index'
   end
 
+  
   private 
   def picture_params
     params.require(:picture).permit(:photo_url)
