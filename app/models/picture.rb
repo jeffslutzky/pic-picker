@@ -30,7 +30,7 @@ class Picture < ActiveRecord::Base
   end
 
   def self.session_pics
-    session_pics = Picture.all.shuffle.slice(0..9)
+    session_pics = Picture.all.shuffle.slice(0..4)
   end
 
 

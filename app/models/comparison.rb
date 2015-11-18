@@ -19,7 +19,7 @@ class Comparison < ActiveRecord::Base
 
   def pic_picker(session_pics)
     selected_pics ||= []
-    if session_pics.length == 10
+    if session_pics.length == 5
       selected_1 = session_pics.pop
       selected_2 = session_pics.pop
       selected_pics << selected_1
