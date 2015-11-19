@@ -23971,3 +23971,2541 @@ Processing by ComparisonsController#index as HTML
   [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
   Rendered comparisons/index.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 42ms (Views: 36.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2015-11-19 17:17:21 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ComparisonsController#index as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.8ms)[0m  [1mINSERT INTO "comparisons" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-11-19 22:17:21.898562"], ["updated_at", "2015-11-19 22:17:21.898562"]]
+  [1m[35m (3.4ms)[0m  commit transaction
+  Rendered comparisons/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 286ms (Views: 238.5ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/comparisons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:17:22 -0500
+
+
+Started GET "/assets/favorites.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:17:22 -0500
+
+
+Started GET "/assets/pictures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:17:22 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:17:22 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-19 17:17:22 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-19 17:17:22 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-19 17:17:22 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-19 17:17:22 -0500
+
+
+Started GET "/assets/picture.self-6c317ed7a2b4897fa44059af38ba5039ade765957acda81678f27a24e8f1f217.js?body=1" for ::1 at 2015-11-19 17:17:22 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-19 17:17:22 -0500
+
+
+Started GET "/pictures?id=16" for ::1 at 2015-11-19 17:17:25 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mComparison Load (0.2ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mPicture Load (2.7ms)[0m  SELECT "pictures".* FROM "pictures"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 16], ["updated_at", "2015-11-19 22:17:25.420151"], ["id", 96]]
+  [1m[36m (4.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 16], ["updated_at", "2015-11-19 22:17:25.428417"], ["id", 172]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 16], ["updated_at", "2015-11-19 22:17:25.433972"], ["id", 58]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 16], ["updated_at", "2015-11-19 22:17:25.440671"], ["id", 105]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 16], ["updated_at", "2015-11-19 22:17:25.446027"], ["id", 89]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 175ms (Views: 73.1ms | ActiveRecord: 20.6ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:17:30 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QtCc9E5bflcaPOClIKXl2dzH719tFkqR0HKnsY/pgrbG3yMuhQmVD+7KgzGCLuwGDeyP+d2wnd0OraGxbUfNbA==", "id"=>"89", "comparison_id"=>"16", "id1"=>"89", "id2"=>"105", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.2ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mPicture Load (0.2ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 89]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 105]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 105  [["comparison_id", 16]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 16]]
+  [1m[36mPicture Load (0.2ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 16]]
+  Rendered comparisons/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 87ms (Views: 48.4ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:17:33 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/TsTYIkgKflj7BbxGubfuWULL/a+Cs+vrPsVQD/+oe15NKy6QnLCoZcadWW4bdZmtCBPUA6sGONyJBNA3VDuNw==", "id"=>"89", "comparison_id"=>"16", "id1"=>"89", "id2"=>"96", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 89]]
+  [1m[35mPicture Load (0.2ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 96]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 96  [["comparison_id", 16]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 16]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 16]]
+  Rendered comparisons/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 55ms (Views: 46.3ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:17:39 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ePOWGifl2TewZ8XeGFae4lwmF765gutB4pGnDc29zr38/CnA7Lcyb0SRpkq63Zc9jQ13GAkkPA08TqENLxOBZw==", "id"=>"172", "comparison_id"=>"16", "id1"=>"89", "id2"=>"172", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mPicture Load (0.2ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 172]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 89]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 89  [["comparison_id", 16]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 16]]
+  [1m[36mPicture Load (0.3ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 16]]
+  Rendered comparisons/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 64ms (Views: 53.9ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:17:42 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1ddWRJRAGA6RTy8qqZ2eBXKErnEuT2MbhGmT+Lbm30lR2OmeXxLzVmW5TL4LFpfao6/O157ptFdatpX4VEiQkw==", "id"=>"172", "comparison_id"=>"16", "id1"=>"172", "id2"=>"58", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.2ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 172]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 58]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 58  [["comparison_id", 16]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 16]]
+  Rendered comparisons/result.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 66ms (Views: 59.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/create?utf8=%E2%9C%93&photo_url=http%3A%2F%2Fshinishikawa.com%2Fwp-content%2Fuploads%2F2015%2F08%2FKAE0519.jpg&user%5Bemail_address%5D=jeffslutzky%40gmail.com&commit=Get+your+photo" for ::1 at 2015-11-19 17:17:58 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "photo_url"=>"http://shinishikawa.com/wp-content/uploads/2015/08/KAE0519.jpg", "user"=>{"email_address"=>"jeffslutzky@gmail.com"}, "commit"=>"Get your photo"}
+Unpermitted parameter: email_address
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email_address", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email_address", "jeffslutzky@gmail.com"], ["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE0519.jpg"], ["created_at", "2015-11-19 22:17:58.344713"], ["updated_at", "2015-11-19 22:17:58.344713"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  Rendered user_mailer/result_email.html.erb within layouts/mailer (0.4ms)
+  Rendered user_mailer/result_email.text.erb within layouts/mailer (0.4ms)
+
+UserMailer#result_email: processed outbound mail in 283.5ms
+
+Sent mail to jeffslutzky@gmail.com (21.0ms)
+Date: Thu, 19 Nov 2015 17:17:58 -0500
+From: jeffslutzky@gmail.com
+To: jeffslutzky@gmail.com
+Message-ID: <564e4a96a1439_f7323fd78d12a404804c@Jeffs-MacBook-Air.local.mail>
+Subject: Your favorite photo
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_564e4a969df14_f7323fd78d12a4047993";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_564e4a969df14_f7323fd78d12a4047993
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+
+http://shinishikawa.com/wp-content/uploads/2015/08/KAE0519.jpg
+
+----==_mimepart_564e4a969df14_f7323fd78d12a4047993
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Hello!</h1>
+    <p>
+      Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+      
+    </p>
+  	<p>
+  		http://shinishikawa.com/wp-content/uploads/2015/08/KAE0519.jpg
+  	</p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_564e4a969df14_f7323fd78d12a4047993--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 337ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2015-11-19 17:17:58 -0500
+Processing by ComparisonsController#index as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comparisons" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-11-19 22:17:58.683843"], ["updated_at", "2015-11-19 22:17:58.683843"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  Rendered comparisons/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 40ms (Views: 34.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/pictures?id=17" for ::1 at 2015-11-19 17:30:44 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mPicture Load (1.1ms)[0m  SELECT "pictures".* FROM "pictures"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 17], ["updated_at", "2015-11-19 22:30:44.124694"], ["id", 83]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 17], ["updated_at", "2015-11-19 22:30:44.129139"], ["id", 167]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 17], ["updated_at", "2015-11-19 22:30:44.134006"], ["id", 146]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 17], ["updated_at", "2015-11-19 22:30:44.138482"], ["id", 69]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 17], ["updated_at", "2015-11-19 22:30:44.142610"], ["id", 114]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 71ms (Views: 32.5ms | ActiveRecord: 15.4ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:30:48 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"466T6GKnGLWeGOyJlSvPNfU6LQqPrN3ec0QfOeR4deBnoSwyqfXz7Wrujx03oMbqJBFNrD8KCpKtmxk5BtY6Og==", "id"=>"114", "comparison_id"=>"17", "id1"=>"114", "id2"=>"69", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mPicture Load (0.3ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 114]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 69]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 69  [["comparison_id", 17]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 17]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 17]]
+  Rendered comparisons/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 46ms (Views: 36.6ms | ActiveRecord: 3.4ms)
+  [1m[36mUser Load (3.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:31:14 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W3O3lKwZA8sF0H13RKTAZ2DbI5uz7GzBvKECg0wthVLffAhOZ0vok/EmHuPmL8m4sfBDPQNKu41ifgSDroPKiA==", "id"=>"83", "comparison_id"=>"17", "id1"=>"114", "id2"=>"83", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.3ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mPicture Load (0.2ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 83]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 114]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 114  [["comparison_id", 17]]
+  [1m[36m (7.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 17]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 17]]
+  Rendered comparisons/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 47ms (Views: 31.9ms | ActiveRecord: 8.5ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:31:17 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"93qWTP5thkxQ/ty2EIn8nhW8ZeFn5r4xcVFhV3N6wDlzdSmWNT9tFKQIvyKyAvVBxJcFR9dAaX2vjmdXkdSP4w==", "id"=>"83", "comparison_id"=>"17", "id1"=>"83", "id2"=>"167", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 83]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 167]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 167  [["comparison_id", 17]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 17]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 17]]
+  Rendered comparisons/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 51ms (Views: 41.6ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:31:19 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F2BlesIGCoEYocxGpQtUrrrvPYzeUgqXM8s9bezfwSqTb9qgCVTh2exXr9IHgF1xa8RdKm703dvtFDttDnGO8A==", "id"=>"83", "comparison_id"=>"17", "id1"=>"83", "id2"=>"146", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 83]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 146]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 146  [["comparison_id", 17]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 17]]
+  Rendered comparisons/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 48ms (Views: 40.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/users/create?utf8=%E2%9C%93&photo_url=http%3A%2F%2Fshinishikawa.com%2Fwp-content%2Fuploads%2F2015%2F08%2FKAE2335.jpg&user%5Bemail_address%5D=vinnyalfieri%40gmail.com&commit=Get+your+photo" for ::1 at 2015-11-19 17:31:36 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "photo_url"=>"http://shinishikawa.com/wp-content/uploads/2015/08/KAE2335.jpg", "user"=>{"email_address"=>"vinnyalfieri@gmail.com"}, "commit"=>"Get your photo"}
+Unpermitted parameter: email_address
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email_address", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email_address", "vinnyalfieri@gmail.com"], ["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2335.jpg"], ["created_at", "2015-11-19 22:31:36.681347"], ["updated_at", "2015-11-19 22:31:36.681347"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from block in create at /Users/jeffslutzky/Dropbox/Labs/project_MJH/app/controllers/users_controller.rb:10)
+  Rendered user_mailer/result_email.html.erb within layouts/mailer (0.1ms)
+  Rendered user_mailer/result_email.text.erb within layouts/mailer (0.1ms)
+
+UserMailer#result_email: processed outbound mail in 21.3ms
+
+Sent mail to jeffslutzky@gmail.com (4.5ms)
+Date: Thu, 19 Nov 2015 17:31:36 -0500
+From: jeffslutzky@gmail.com
+To: jeffslutzky@gmail.com
+Message-ID: <564e4dc8afa2d_f7323fd78d6fd14c8223@Jeffs-MacBook-Air.local.mail>
+Subject: Your favorite photo
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_564e4dc8aeb35_f7323fd78d6fd14c813b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_564e4dc8aeb35_f7323fd78d6fd14c813b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+
+http://shinishikawa.com/wp-content/uploads/2015/08/KAE2335.jpg
+
+----==_mimepart_564e4dc8aeb35_f7323fd78d6fd14c813b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Hello!</h1>
+    <p>
+      Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+      
+    </p>
+  	<p>
+  		http://shinishikawa.com/wp-content/uploads/2015/08/KAE2335.jpg
+  	</p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_564e4dc8aeb35_f7323fd78d6fd14c813b--
+
+Redirected to 
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 2.9ms)
+
+NoMethodError (undefined method `user_url' for #<UsersController:0x007faf228ab820>):
+  app/controllers/users_controller.rb:11:in `block (2 levels) in create'
+  app/controllers/users_controller.rb:5:in `create'
+
+
+  Rendered /Users/jeffslutzky/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/jeffslutzky/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/jeffslutzky/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jeffslutzky/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.3ms)
+  Rendered /Users/jeffslutzky/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/jeffslutzky/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jeffslutzky/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jeffslutzky/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jeffslutzky/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (50.5ms)
+  Rendered /Users/jeffslutzky/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jeffslutzky/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jeffslutzky/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (122.3ms)
+
+
+Started GET "/users/create?utf8=%E2%9C%93&photo_url=http%3A%2F%2Fshinishikawa.com%2Fwp-content%2Fuploads%2F2015%2F08%2FKAE2335.jpg&user%5Bemail_address%5D=vinnyalfieri%40gmail.com&commit=Get+your+photo" for ::1 at 2015-11-19 17:32:53 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "photo_url"=>"http://shinishikawa.com/wp-content/uploads/2015/08/KAE2335.jpg", "user"=>{"email_address"=>"vinnyalfieri@gmail.com"}, "commit"=>"Get your photo"}
+Unpermitted parameter: email_address
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email_address", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email_address", "vinnyalfieri@gmail.com"], ["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2335.jpg"], ["created_at", "2015-11-19 22:32:53.273131"], ["updated_at", "2015-11-19 22:32:53.273131"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from block in create at /Users/jeffslutzky/Dropbox/Labs/project_MJH/app/controllers/users_controller.rb:10)
+  Rendered user_mailer/result_email.html.erb within layouts/mailer (0.1ms)
+  Rendered user_mailer/result_email.text.erb within layouts/mailer (0.0ms)
+
+UserMailer#result_email: processed outbound mail in 18.8ms
+
+Sent mail to jeffslutzky@gmail.com (4.2ms)
+Date: Thu, 19 Nov 2015 17:32:53 -0500
+From: jeffslutzky@gmail.com
+To: jeffslutzky@gmail.com
+Message-ID: <564e4e154a4b1_f7323fd7908b165c84f4@Jeffs-MacBook-Air.local.mail>
+Subject: Your favorite photo
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_564e4e1549675_f7323fd7908b165c8326";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_564e4e1549675_f7323fd7908b165c8326
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+
+http://shinishikawa.com/wp-content/uploads/2015/08/KAE2335.jpg
+
+----==_mimepart_564e4e1549675_f7323fd7908b165c8326
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Hello!</h1>
+    <p>
+      Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+      
+    </p>
+  	<p>
+  		http://shinishikawa.com/wp-content/uploads/2015/08/KAE2335.jpg
+  	</p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_564e4e1549675_f7323fd7908b165c8326--
+
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from block in create at (pry):1)
+  Rendered user_mailer/result_email.html.erb within layouts/mailer (0.1ms)
+  Rendered user_mailer/result_email.text.erb within layouts/mailer (0.0ms)
+
+UserMailer#result_email: processed outbound mail in 18.6ms
+
+Sent mail to jeffslutzky@gmail.com (8.2ms)
+Date: Thu, 19 Nov 2015 17:33:14 -0500
+From: jeffslutzky@gmail.com
+To: jeffslutzky@gmail.com
+Message-ID: <564e4e2acdd39_f7323fd7908b165c86ac@Jeffs-MacBook-Air.local.mail>
+Subject: Your favorite photo
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_564e4e2acc839_f7323fd7908b165c85dc";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_564e4e2acc839_f7323fd7908b165c85dc
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+
+http://shinishikawa.com/wp-content/uploads/2015/08/KAE2335.jpg
+
+----==_mimepart_564e4e2acc839_f7323fd7908b165c85dc
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Hello!</h1>
+    <p>
+      Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+      
+    </p>
+  	<p>
+  		http://shinishikawa.com/wp-content/uploads/2015/08/KAE2335.jpg
+  	</p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_564e4e2acc839_f7323fd7908b165c85dc--
+
+  Rendered user_mailer/result_email.html.erb within layouts/mailer (0.1ms)
+  Rendered user_mailer/result_email.text.erb within layouts/mailer (0.1ms)
+
+UserMailer#result_email: processed outbound mail in 22.2ms
+
+Sent mail to jeffslutzky@gmail.com (4.8ms)
+Date: Thu, 19 Nov 2015 17:33:36 -0500
+From: jeffslutzky@gmail.com
+To: jeffslutzky@gmail.com
+Message-ID: <564e4e401b14_f7323fd7908b165c886f@Jeffs-MacBook-Air.local.mail>
+Subject: Your favorite photo
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_564e4e4036f_f7323fd7908b165c876c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_564e4e4036f_f7323fd7908b165c876c
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+
+http://shinishikawa.com/wp-content/uploads/2015/08/KAE2335.jpg
+
+----==_mimepart_564e4e4036f_f7323fd7908b165c876c
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Hello!</h1>
+    <p>
+      Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+      
+    </p>
+  	<p>
+  		http://shinishikawa.com/wp-content/uploads/2015/08/KAE2335.jpg
+  	</p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_564e4e4036f_f7323fd7908b165c876c--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 139459ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2015-11-19 17:35:12 -0500
+Processing by ComparisonsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "comparisons" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-11-19 22:35:12.747042"], ["updated_at", "2015-11-19 22:35:12.747042"]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+  Rendered comparisons/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 53ms (Views: 41.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/pictures?id=18" for ::1 at 2015-11-19 17:36:44 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mPicture Load (0.9ms)[0m  [1mSELECT "pictures".* FROM "pictures"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 18], ["updated_at", "2015-11-19 22:36:44.688586"], ["id", 139]]
+  [1m[35m (3.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 18], ["updated_at", "2015-11-19 22:36:44.694504"], ["id", 49]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 18], ["updated_at", "2015-11-19 22:36:44.699984"], ["id", 115]]
+  [1m[35m (3.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 18], ["updated_at", "2015-11-19 22:36:44.709226"], ["id", 162]]
+  [1m[36m (6.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 18], ["updated_at", "2015-11-19 22:36:44.718598"], ["id", 14]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  Rendered pictures/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 96ms (Views: 42.9ms | ActiveRecord: 22.3ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:36:48 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0FKgSavLzGTv4goBP+jOxNinH9PurkdIbVF45d0rRkVUXR+TYJknPBsUaZWdY8cbCYx/dV4IkASzjn7lP4UJnw==", "id"=>"14", "comparison_id"=>"18", "id1"=>"14", "id2"=>"162", "commit"=>"Pick"}
+  [1m[36mComparison Load (0.2ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mPicture Load (0.2ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 162]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 162[0m  [["comparison_id", 18]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 18]]
+  [1m[35mPicture Load (0.2ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 18]]
+  Rendered comparisons/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 73ms (Views: 50.6ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:36:51 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2DeJFp7sTqnRM5nN5NDdvIpBWZg8GXY9FTfotMHGBjtcODbMVb6l8SXF+llGW9RjW2o5Poy/oXHL6O60I2hJ4Q==", "id"=>"14", "comparison_id"=>"18", "id1"=>"14", "id2"=>"49", "commit"=>"Pick"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 49]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 49[0m  [["comparison_id", 18]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 18]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 18]]
+  Rendered comparisons/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 58ms (Views: 31.7ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:36:53 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZdIpxnGNlOshHASHhl55z6M3xWDa2/Bx5C9LuyJamsfh3ZYcut9/s9XqZxMk1XAQchylxmp9Jz068E27wPTVHQ==", "id"=>"14", "comparison_id"=>"18", "id1"=>"14", "id2"=>"139", "commit"=>"Pick"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 139]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 139[0m  [["comparison_id", 18]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 18]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 18]]
+  Rendered comparisons/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 62ms (Views: 31.2ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:36:57 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5K7kWLirINDYbaeu7XxarHUvxM5tKCmen21LNIK1EWhgoVuCc/nLiCybxDpP91NzpASkaN2O/tJBsk00YBtesg==", "id"=>"14", "comparison_id"=>"18", "id1"=>"14", "id2"=>"115", "commit"=>"Pick"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 115]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 115[0m  [["comparison_id", 18]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 18]]
+  Rendered comparisons/result.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 40ms (Views: 33.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/users/create?utf8=%E2%9C%93&photo_url=http%3A%2F%2Fshinishikawa.com%2Fwp-content%2Fuploads%2F2015%2F08%2FKAE7221.jpg&user%5Bemail_address%5D=jeffslutzky%40gmail.com&commit=Get+your+photo" for ::1 at 2015-11-19 17:37:04 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "photo_url"=>"http://shinishikawa.com/wp-content/uploads/2015/08/KAE7221.jpg", "user"=>{"email_address"=>"jeffslutzky@gmail.com"}, "commit"=>"Get your photo"}
+Unpermitted parameter: email_address
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email_address", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email_address", "jeffslutzky@gmail.com"], ["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE7221.jpg"], ["created_at", "2015-11-19 22:37:04.554213"], ["updated_at", "2015-11-19 22:37:04.554213"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  Rendered user_mailer/result_email.html.erb within layouts/mailer (0.1ms)
+  Rendered user_mailer/result_email.text.erb within layouts/mailer (0.1ms)
+
+UserMailer#result_email: processed outbound mail in 37.5ms
+
+Sent mail to jeffslutzky@gmail.com (6.2ms)
+Date: Thu, 19 Nov 2015 17:37:04 -0500
+From: jeffslutzky@gmail.com
+To: jeffslutzky@gmail.com
+Message-ID: <564e4f10953a4_f7323fd78d845c20907d@Jeffs-MacBook-Air.local.mail>
+Subject: Your favorite photo
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_564e4f1090b0e_f7323fd78d845c208945";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_564e4f1090b0e_f7323fd78d845c208945
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+
+http://shinishikawa.com/wp-content/uploads/2015/08/KAE7221.jpg
+
+----==_mimepart_564e4f1090b0e_f7323fd78d845c208945
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Hello!</h1>
+    <p>
+      Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+      
+    </p>
+  	<p>
+  		http://shinishikawa.com/wp-content/uploads/2015/08/KAE7221.jpg
+  	</p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_564e4f1090b0e_f7323fd78d845c208945--
+
+  Rendered user_mailer/result_email.html.erb within layouts/mailer (0.2ms)
+  Rendered user_mailer/result_email.text.erb within layouts/mailer (0.0ms)
+
+UserMailer#result_email: processed outbound mail in 23.8ms
+
+Sent mail to jeffslutzky@gmail.com (8.4ms)
+Date: Thu, 19 Nov 2015 17:37:09 -0500
+From: jeffslutzky@gmail.com
+To: jeffslutzky@gmail.com
+Message-ID: <564e4f15de024_f7323fd78d845c209253@Jeffs-MacBook-Air.local.mail>
+Subject: Your favorite photo
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_564e4f15dc9a0_f7323fd78d845c209193";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_564e4f15dc9a0_f7323fd78d845c209193
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+
+http://shinishikawa.com/wp-content/uploads/2015/08/KAE7221.jpg
+
+----==_mimepart_564e4f15dc9a0_f7323fd78d845c209193
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Hello!</h1>
+    <p>
+      Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+      
+    </p>
+  	<p>
+  		http://shinishikawa.com/wp-content/uploads/2015/08/KAE7221.jpg
+  	</p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_564e4f15dc9a0_f7323fd78d845c209193--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 163735ms (ActiveRecord: 2.9ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:39:48 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5K7kWLirINDYbaeu7XxarHUvxM5tKCmen21LNIK1EWhgoVuCc/nLiCybxDpP91NzpASkaN2O/tJBsk00YBtesg==", "id"=>"14", "comparison_id"=>"18", "id1"=>"14", "id2"=>"115", "commit"=>"Pick"}
+  [1m[36mComparison Load (0.2ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mPicture Load (0.4ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 115]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 115[0m  [["comparison_id", 18]]
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 18]]
+  Rendered comparisons/result.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 59ms (Views: 51.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/favorites.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:39:48 -0500
+
+
+Started GET "/assets/pictures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:39:48 -0500
+
+
+Started GET "/assets/comparisons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:39:48 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:39:48 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-19 17:39:48 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-19 17:39:48 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-19 17:39:48 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-19 17:39:48 -0500
+
+
+Started GET "/assets/picture.self-6c317ed7a2b4897fa44059af38ba5039ade765957acda81678f27a24e8f1f217.js?body=1" for ::1 at 2015-11-19 17:39:48 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-19 17:39:48 -0500
+
+
+Started GET "/users/create?utf8=%E2%9C%93&photo_url=http%3A%2F%2Fshinishikawa.com%2Fwp-content%2Fuploads%2F2015%2F08%2FKAE7221.jpg&user%5Bemail_address%5D=a%40a.com&commit=Get+your+photo" for ::1 at 2015-11-19 17:40:08 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "photo_url"=>"http://shinishikawa.com/wp-content/uploads/2015/08/KAE7221.jpg", "user"=>{"email_address"=>"a@a.com"}, "commit"=>"Get your photo"}
+Unpermitted parameter: email_address
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email_address", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email_address", "a@a.com"], ["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE7221.jpg"], ["created_at", "2015-11-19 22:40:08.053928"], ["updated_at", "2015-11-19 22:40:08.053928"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  Rendered user_mailer/result_email.html.erb within layouts/mailer (0.1ms)
+  Rendered user_mailer/result_email.text.erb within layouts/mailer (0.0ms)
+
+UserMailer#result_email: processed outbound mail in 19.2ms
+
+Sent mail to jeffslutzky@gmail.com (5.2ms)
+Date: Thu, 19 Nov 2015 17:40:08 -0500
+From: jeffslutzky@gmail.com
+To: jeffslutzky@gmail.com
+Message-ID: <564e4fc8136c6_f7323fd78db038549446@Jeffs-MacBook-Air.local.mail>
+Subject: Your favorite photo
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_564e4fc8123c8_f7323fd78db0385493ed";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_564e4fc8123c8_f7323fd78db0385493ed
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+
+http://shinishikawa.com/wp-content/uploads/2015/08/KAE7221.jpg
+
+----==_mimepart_564e4fc8123c8_f7323fd78db0385493ed
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Hello!</h1>
+    <p>
+      Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+      
+    </p>
+  	<p>
+  		http://shinishikawa.com/wp-content/uploads/2015/08/KAE7221.jpg
+  	</p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_564e4fc8123c8_f7323fd78db0385493ed--
+
+  Rendered user_mailer/result_email.html.erb within layouts/mailer (0.1ms)
+  Rendered user_mailer/result_email.text.erb within layouts/mailer (0.0ms)
+
+UserMailer#result_email: processed outbound mail in 22.4ms
+
+Sent mail to jeffslutzky@gmail.com (6.7ms)
+Date: Thu, 19 Nov 2015 17:40:13 -0500
+From: jeffslutzky@gmail.com
+To: jeffslutzky@gmail.com
+Message-ID: <564e4fcdb444a_f7323fd78db0385496cc@Jeffs-MacBook-Air.local.mail>
+Subject: Your favorite photo
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_564e4fcdb325e_f7323fd78db038549588";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_564e4fcdb325e_f7323fd78db038549588
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+
+http://shinishikawa.com/wp-content/uploads/2015/08/KAE7221.jpg
+
+----==_mimepart_564e4fcdb325e_f7323fd78db038549588
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Hello!</h1>
+    <p>
+      Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+      
+    </p>
+  	<p>
+  		http://shinishikawa.com/wp-content/uploads/2015/08/KAE7221.jpg
+  	</p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_564e4fcdb325e_f7323fd78db038549588--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 23867ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2015-11-19 17:40:31 -0500
+Processing by ComparisonsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "comparisons" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-11-19 22:40:31.934967"], ["updated_at", "2015-11-19 22:40:31.934967"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  Rendered comparisons/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 60ms (Views: 54.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2015-11-19 17:42:01 -0500
+Processing by ComparisonsController#index as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comparisons" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-11-19 22:42:01.138609"], ["updated_at", "2015-11-19 22:42:01.138609"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  Rendered comparisons/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 44ms (Views: 39.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/comparisons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:42:01 -0500
+
+
+Started GET "/assets/favorites.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:42:01 -0500
+
+
+Started GET "/assets/pictures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:42:01 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:42:01 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-19 17:42:01 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-19 17:42:01 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-19 17:42:01 -0500
+
+
+Started GET "/assets/picture.self-6c317ed7a2b4897fa44059af38ba5039ade765957acda81678f27a24e8f1f217.js?body=1" for ::1 at 2015-11-19 17:42:01 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-19 17:42:01 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-19 17:42:01 -0500
+
+
+Started GET "/pictures?id=20" for ::1 at 2015-11-19 17:42:02 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35mPicture Load (0.5ms)[0m  SELECT "pictures".* FROM "pictures"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 20], ["updated_at", "2015-11-19 22:42:02.817260"], ["id", 101]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 20], ["updated_at", "2015-11-19 22:42:02.822537"], ["id", 6]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 20], ["updated_at", "2015-11-19 22:42:02.828294"], ["id", 96]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 20], ["updated_at", "2015-11-19 22:42:02.833695"], ["id", 37]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 20], ["updated_at", "2015-11-19 22:42:02.839681"], ["id", 136]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 73ms (Views: 42.1ms | ActiveRecord: 15.0ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:42:06 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mMNfqASovHQNsW9zDLgdg8dv+zwxuUQi+Bg4x408qk4czOByz/pXLPlHDOeuMxRcFkSbmoEfk24mxz7Hb5LllA==", "id"=>"136", "comparison_id"=>"20", "id1"=>"136", "id2"=>"37", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 136]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 37]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 37  [["comparison_id", 20]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 20]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 20]]
+  Rendered comparisons/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 66ms (Views: 38.6ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:42:08 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GLU5yTS7rzphOKGeEC7lyxh4dU1JC8j1+CrVaYZ/Dr6cuoYT/+lEYpXOwgqypewUyVMV6/mtH7km9dNpZNFBZA==", "id"=>"136", "comparison_id"=>"20", "id1"=>"136", "id2"=>"101", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 136]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 101]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 101  [["comparison_id", 20]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 20]]
+  [1m[36mPicture Load (0.2ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 20]]
+  Rendered comparisons/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 51ms (Views: 37.5ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:42:11 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mnB1jJRTpBgnV048c/6wILZWcb/B3LovcYL/CkLjQp0ef8pWXwFPQNOhLajRdbn/Z30RGXF6bWOvXfkKoE0NRw==", "id"=>"136", "comparison_id"=>"20", "id1"=>"136", "id2"=>"6", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 136]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 6  [["comparison_id", 20]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 20]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 20]]
+  Rendered comparisons/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 64ms (Views: 38.6ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:42:13 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VZb+AQHZe3FsCQFPBi9LA/CjJij0cnaqsC7929x3VLbRmUHbyouQKZj/YtukpELcIYhGjkTUoeZu8fvbPtkbbA==", "id"=>"136", "comparison_id"=>"20", "id1"=>"136", "id2"=>"96", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 136]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 96]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 96  [["comparison_id", 20]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 20]]
+  Rendered comparisons/result.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 60ms (Views: 42.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/create?utf8=%E2%9C%93&photo_url=http%3A%2F%2Fshinishikawa.com%2Fwp-content%2Fuploads%2F2015%2F08%2FKAE7006.jpg&user%5Bemail_address%5D=jeffslutzky%40gmail.com&commit=Get+your+photo" for ::1 at 2015-11-19 17:42:19 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "photo_url"=>"http://shinishikawa.com/wp-content/uploads/2015/08/KAE7006.jpg", "user"=>{"email_address"=>"jeffslutzky@gmail.com"}, "commit"=>"Get your photo"}
+Unpermitted parameter: email_address
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email_address", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email_address", "jeffslutzky@gmail.com"], ["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE7006.jpg"], ["created_at", "2015-11-19 22:42:19.437909"], ["updated_at", "2015-11-19 22:42:19.437909"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  Rendered user_mailer/result_email.html.erb within layouts/mailer (0.1ms)
+  Rendered user_mailer/result_email.text.erb within layouts/mailer (0.1ms)
+
+UserMailer#result_email: processed outbound mail in 23.1ms
+
+Sent mail to jeffslutzky@gmail.com (4.8ms)
+Date: Thu, 19 Nov 2015 17:42:19 -0500
+From: jeffslutzky@gmail.com
+To: jeffslutzky@gmail.com
+Message-ID: <564e504b71f5f_f7323fd78f5f53389861@Jeffs-MacBook-Air.local.mail>
+Subject: Your favorite photo
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_564e504b7128b_f7323fd78f5f53389798";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_564e504b7128b_f7323fd78f5f53389798
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+
+http://shinishikawa.com/wp-content/uploads/2015/08/KAE7006.jpg
+
+----==_mimepart_564e504b7128b_f7323fd78f5f53389798
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Hello!</h1>
+    <p>
+      Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+      
+    </p>
+  	<p>
+  		http://shinishikawa.com/wp-content/uploads/2015/08/KAE7006.jpg
+  	</p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_564e504b7128b_f7323fd78f5f53389798--
+
+  Rendered user_mailer/result_email.html.erb within layouts/mailer (0.1ms)
+  Rendered user_mailer/result_email.text.erb within layouts/mailer (0.0ms)
+
+UserMailer#result_email: processed outbound mail in 20.3ms
+
+Sent mail to jeffslutzky@gmail.com (5.7ms)
+Date: Thu, 19 Nov 2015 17:42:27 -0500
+From: jeffslutzky@gmail.com
+To: jeffslutzky@gmail.com
+Message-ID: <564e5053a3ce6_f7323fd78f5f5338100f9@Jeffs-MacBook-Air.local.mail>
+Subject: Your favorite photo
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_564e5053a2e0e_f7323fd78f5f533899c9";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_564e5053a2e0e_f7323fd78f5f533899c9
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+
+http://shinishikawa.com/wp-content/uploads/2015/08/KAE7006.jpg
+
+----==_mimepart_564e5053a2e0e_f7323fd78f5f533899c9
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Hello!</h1>
+    <p>
+      Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+      
+    </p>
+  	<p>
+  		http://shinishikawa.com/wp-content/uploads/2015/08/KAE7006.jpg
+  	</p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_564e5053a2e0e_f7323fd78f5f533899c9--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 10611ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2015-11-19 17:42:30 -0500
+Processing by ComparisonsController#index as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comparisons" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-11-19 22:42:30.059384"], ["updated_at", "2015-11-19 22:42:30.059384"]]
+  [1m[35m (5.2ms)[0m  commit transaction
+  Rendered comparisons/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 46ms (Views: 38.4ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/comparisons" for ::1 at 2015-11-19 17:52:55 -0500
+Processing by ComparisonsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comparisons" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-11-19 22:52:55.762622"], ["updated_at", "2015-11-19 22:52:55.762622"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  Rendered comparisons/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 72ms (Views: 66.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/favorites.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:52:56 -0500
+
+
+Started GET "/assets/pictures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:52:56 -0500
+
+
+Started GET "/assets/comparisons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:52:56 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:52:56 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-19 17:52:56 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-19 17:52:56 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-19 17:52:56 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-19 17:52:56 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-19 17:52:56 -0500
+
+
+Started GET "/assets/picture.self-6c317ed7a2b4897fa44059af38ba5039ade765957acda81678f27a24e8f1f217.js?body=1" for ::1 at 2015-11-19 17:52:56 -0500
+
+
+Started GET "/pictures?id=22" for ::1 at 2015-11-19 17:52:57 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mComparison Load (0.2ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 22]]
+  [1m[36mPicture Load (1.4ms)[0m  [1mSELECT "pictures".* FROM "pictures"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-19 22:52:57.602889"], ["id", 125]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-19 22:52:57.605976"], ["id", 200]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-19 22:52:57.610989"], ["id", 159]]
+  [1m[35m (5.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-19 22:52:57.619423"], ["id", 175]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-19 22:52:57.623512"], ["id", 78]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  Rendered pictures/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 88ms (Views: 55.6ms | ActiveRecord: 16.5ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:53:01 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AW4p1QB15s5I61fyXkAyvz1R9chBO1OIeZyG52fsu/OFYZYPyycNlrwdNGb8yztg7HqVbvGdhMSnQ4DnhUL0KQ==", "id"=>"78", "comparison_id"=>"22", "id1"=>"78", "id2"=>"175", "commit"=>"Pick"}
+  [1m[36mComparison Load (0.2ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 22]]
+  [1m[35mPicture Load (0.2ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 78]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 175]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 175[0m  [["comparison_id", 22]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 22]]
+  [1m[35mPicture Load (0.2ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 22]]
+  Rendered comparisons/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 67ms (Views: 55.6ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:53:03 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eCjupHLsZg0rURhvhuCi9fKIjFqvxlw17zy9IfPV1ov8J1F+ub6NVd+ne/ska6sqI6Ps/B9gi3kx47shEXuZUQ==", "id"=>"78", "comparison_id"=>"22", "id1"=>"78", "id2"=>"159", "commit"=>"Pick"}
+  [1m[36mComparison Load (0.2ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 22]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 78]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 159]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 159[0m  [["comparison_id", 22]]
+  [1m[35m (3.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 22]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 22]]
+  Rendered comparisons/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 75ms (Views: 64.6ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:53:05 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1ajuMvgHKW3Eu5PVv6XFWq/mtzsH2dRzBNV7LhvBIIdRp1HoM1XCNTBN8EEdLsyFfs3Xnbd/Az/aCn0u+W9vXQ==", "id"=>"78", "comparison_id"=>"22", "id1"=>"78", "id2"=>"200", "commit"=>"Pick"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 22]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 78]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 200]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 200[0m  [["comparison_id", 22]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 22]]
+  [1m[35mPicture Load (0.2ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 22]]
+  Rendered comparisons/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 51ms (Views: 41.7ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:53:08 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UQdY1Pz13Ba3WNy7AE2F9uxqciilq2NvUYtrGL9DiPvVCOcON6c3TkOuvy+ixowpPUESjhUNtCOPVG0YXe3HIQ==", "id"=>"78", "comparison_id"=>"22", "id1"=>"78", "id2"=>"125", "commit"=>"Pick"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 22]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 78]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 125]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 125[0m  [["comparison_id", 22]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 22]]
+  Rendered comparisons/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 56ms (Views: 38.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/create?utf8=%E2%9C%93&photo_url=http%3A%2F%2Fshinishikawa.com%2Fwp-content%2Fuploads%2F2015%2F08%2FKAE4455.jpg&user%5Bemail_address%5D=jeffslutzky%40gmail.com&commit=Get+your+photo" for ::1 at 2015-11-19 17:53:13 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "photo_url"=>"http://shinishikawa.com/wp-content/uploads/2015/08/KAE4455.jpg", "user"=>{"email_address"=>"jeffslutzky@gmail.com"}, "commit"=>"Get your photo"}
+Unpermitted parameter: email_address
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email_address", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email_address", "jeffslutzky@gmail.com"], ["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE4455.jpg"], ["created_at", "2015-11-19 22:53:13.377690"], ["updated_at", "2015-11-19 22:53:13.377690"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  Rendered user_mailer/result_email.html.erb within layouts/mailer (0.1ms)
+  Rendered user_mailer/result_email.text.erb within layouts/mailer (0.1ms)
+
+UserMailer#result_email: processed outbound mail in 29.2ms
+
+Sent mail to jeffslutzky@gmail.com (4.7ms)
+Date: Thu, 19 Nov 2015 17:53:13 -0500
+From: jeffslutzky@gmail.com
+To: jeffslutzky@gmail.com
+Message-ID: <564e52d964a36_f7323fd790adcc741022f@Jeffs-MacBook-Air.local.mail>
+Subject: Your favorite photo
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_564e52d963712_f7323fd790adcc74101b8";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_564e52d963712_f7323fd790adcc74101b8
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+
+http://shinishikawa.com/wp-content/uploads/2015/08/KAE4455.jpg
+
+----==_mimepart_564e52d963712_f7323fd790adcc74101b8
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Hello!</h1>
+    <p>
+      Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+      
+    </p>
+  	<p>
+  		http://shinishikawa.com/wp-content/uploads/2015/08/KAE4455.jpg
+  	</p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_564e52d963712_f7323fd790adcc74101b8--
+
+  Rendered user_mailer/result_email.html.erb within layouts/mailer (0.1ms)
+  Rendered user_mailer/result_email.text.erb within layouts/mailer (0.1ms)
+
+UserMailer#result_email: processed outbound mail in 34.2ms
+
+Sent mail to jeffslutzky@gmail.com (14.8ms)
+Date: Thu, 19 Nov 2015 17:53:19 -0500
+From: jeffslutzky@gmail.com
+To: jeffslutzky@gmail.com
+Message-ID: <564e52df78057_f7323fd790adcc74104db@Jeffs-MacBook-Air.local.mail>
+Subject: Your favorite photo
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_564e52df74c7a_f7323fd790adcc741038e";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_564e52df74c7a_f7323fd790adcc741038e
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+
+http://shinishikawa.com/wp-content/uploads/2015/08/KAE4455.jpg
+
+----==_mimepart_564e52df74c7a_f7323fd790adcc741038e
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Hello!</h1>
+    <p>
+      Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+      
+    </p>
+  	<p>
+  		http://shinishikawa.com/wp-content/uploads/2015/08/KAE4455.jpg
+  	</p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_564e52df74c7a_f7323fd790adcc741038e--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 14531ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2015-11-19 17:53:27 -0500
+Processing by ComparisonsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comparisons" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-11-19 22:53:27.920895"], ["updated_at", "2015-11-19 22:53:27.920895"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  Rendered comparisons/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 49ms (Views: 44.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2015-11-19 17:54:06 -0500
+Processing by ComparisonsController#index as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comparisons" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-11-19 22:54:06.773359"], ["updated_at", "2015-11-19 22:54:06.773359"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  Rendered comparisons/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 38ms (Views: 32.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/comparisons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:54:07 -0500
+
+
+Started GET "/assets/pictures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:54:07 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:54:07 -0500
+
+
+Started GET "/assets/favorites.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:54:07 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-19 17:54:07 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-19 17:54:07 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-19 17:54:07 -0500
+
+
+Started GET "/assets/picture.self-6c317ed7a2b4897fa44059af38ba5039ade765957acda81678f27a24e8f1f217.js?body=1" for ::1 at 2015-11-19 17:54:07 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-19 17:54:07 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-19 17:54:07 -0500
+
+
+Started GET "/pictures?id=24" for ::1 at 2015-11-19 17:54:07 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mComparison Load (0.2ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 24]]
+  [1m[35mPicture Load (0.6ms)[0m  SELECT "pictures".* FROM "pictures"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 24], ["updated_at", "2015-11-19 22:54:07.918759"], ["id", 165]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 24], ["updated_at", "2015-11-19 22:54:07.923514"], ["id", 167]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 24], ["updated_at", "2015-11-19 22:54:07.927618"], ["id", 98]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 24], ["updated_at", "2015-11-19 22:54:07.932444"], ["id", 28]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 24], ["updated_at", "2015-11-19 22:54:07.952728"], ["id", 137]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 76ms (Views: 33.5ms | ActiveRecord: 15.0ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:54:11 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IWwBLoZKCJi4yI+6uvifsw6c9yP0tvS08YYVoQDNjbilY770TRjjwEw+7C4Yc5Zs37eXhUQQI/gvWROh4mPCYg==", "id"=>"137", "comparison_id"=>"24", "id1"=>"137", "id2"=>"28", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.2ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 24]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 137]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 28]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 28  [["comparison_id", 24]]
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 24]]
+  [1m[36mPicture Load (0.2ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 24]]
+  Rendered comparisons/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 73ms (Views: 48.9ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:54:14 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b1s0da4ZE6oZZ7zGFO/kyXIHpi+Re/yZct7SBqIqvM/rVIuvZUv48u2R31K2ZO0WoyzGiSHdK9WsAdQGQITzFQ==", "id"=>"137", "comparison_id"=>"24", "id1"=>"137", "id2"=>"167", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 24]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 137]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 167]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 167  [["comparison_id", 24]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 24]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 24]]
+  Rendered comparisons/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 57ms (Views: 45.8ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:54:16 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I1a5CTHVztxm90SRy5UXjIfnNWc6WlA6/3kBf2vUc1WnWQbT+oclhJIBJwVpHh5TVsxVwYr8h3Yhpgd/iXo8jw==", "id"=>"137", "comparison_id"=>"24", "id1"=>"137", "id2"=>"98", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 24]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 137]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 98]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (12.6ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 98  [["comparison_id", 24]]
+  [1m[36m (6.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 24]]
+  [1m[36mPicture Load (0.2ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 24]]
+  Rendered comparisons/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 218ms (Views: 80.4ms | ActiveRecord: 19.6ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:54:19 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y9wrseH89LAlR4LOoYM202qlKfehFwr2l08IJ9ufg3ZP05RrKq4f6NGx4VoDCD8Mu45JURGx3bpJkA4nOTHMrA==", "id"=>"137", "comparison_id"=>"24", "id1"=>"137", "id2"=>"165", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.2ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 24]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 137]]
+  [1m[35mPicture Load (0.2ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 165]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 165  [["comparison_id", 24]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 24]]
+  Rendered comparisons/result.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 120ms (Views: 76.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/users/create?utf8=%E2%9C%93&photo_url=http%3A%2F%2Fshinishikawa.com%2Fwp-content%2Fuploads%2F2015%2F08%2FKAE6952.jpg&user%5Bemail_address%5D=jeffslutzky%40gmail.com&commit=Get+your+photo" for ::1 at 2015-11-19 17:54:50 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "photo_url"=>"http://shinishikawa.com/wp-content/uploads/2015/08/KAE6952.jpg", "user"=>{"email_address"=>"jeffslutzky@gmail.com"}, "commit"=>"Get your photo"}
+Unpermitted parameter: email_address
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email_address", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email_address", "jeffslutzky@gmail.com"], ["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE6952.jpg"], ["created_at", "2015-11-19 22:54:50.445805"], ["updated_at", "2015-11-19 22:54:50.445805"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  Rendered user_mailer/result_email.html.erb within layouts/mailer (0.1ms)
+  Rendered user_mailer/result_email.text.erb within layouts/mailer (0.1ms)
+
+UserMailer#result_email: processed outbound mail in 44.2ms
+
+Sent mail to jeffslutzky@gmail.com (9.7ms)
+Date: Thu, 19 Nov 2015 17:54:50 -0500
+From: jeffslutzky@gmail.com
+To: jeffslutzky@gmail.com
+Message-ID: <564e533a79887_f7323fd790d10f1810634@Jeffs-MacBook-Air.local.mail>
+Subject: Your favorite photo
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_564e533a77eb0_f7323fd790d10f1810571";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_564e533a77eb0_f7323fd790d10f1810571
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+
+http://shinishikawa.com/wp-content/uploads/2015/08/KAE6952.jpg
+
+----==_mimepart_564e533a77eb0_f7323fd790d10f1810571
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Hello!</h1>
+    <p>
+      Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+      
+    </p>
+  	<p>
+  		http://shinishikawa.com/wp-content/uploads/2015/08/KAE6952.jpg
+  	</p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_564e533a77eb0_f7323fd790d10f1810571--
+
+  Rendered user_mailer/result_email.html.erb within layouts/mailer (0.1ms)
+  Rendered user_mailer/result_email.text.erb within layouts/mailer (0.0ms)
+
+UserMailer#result_email: processed outbound mail in 29.7ms
+
+Sent mail to jeffslutzky@gmail.com (7.8ms)
+Date: Thu, 19 Nov 2015 17:54:56 -0500
+From: jeffslutzky@gmail.com
+To: jeffslutzky@gmail.com
+Message-ID: <564e534080ce5_f7323fd790d10f1810859@Jeffs-MacBook-Air.local.mail>
+Subject: Your favorite photo
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_564e53407e76e_f7323fd790d10f181071a";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_564e53407e76e_f7323fd790d10f181071a
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+
+http://shinishikawa.com/wp-content/uploads/2015/08/KAE6952.jpg
+
+----==_mimepart_564e53407e76e_f7323fd790d10f181071a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Hello!</h1>
+    <p>
+      Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+      
+    </p>
+  	<p>
+  		http://shinishikawa.com/wp-content/uploads/2015/08/KAE6952.jpg
+  	</p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_564e53407e76e_f7323fd790d10f181071a--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 8068ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2015-11-19 17:54:58 -0500
+Processing by ComparisonsController#index as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "comparisons" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-11-19 22:54:58.527158"], ["updated_at", "2015-11-19 22:54:58.527158"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  Rendered comparisons/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 56ms (Views: 48.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/pictures?id=25" for ::1 at 2015-11-19 17:59:51 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mComparison Load (0.2ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 25]]
+  [1m[35mPicture Load (1.0ms)[0m  SELECT "pictures".* FROM "pictures"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 25], ["updated_at", "2015-11-19 22:59:52.032901"], ["id", 172]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 25], ["updated_at", "2015-11-19 22:59:52.037986"], ["id", 139]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 25], ["updated_at", "2015-11-19 22:59:52.042314"], ["id", 186]]
+  [1m[36m (8.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 25], ["updated_at", "2015-11-19 22:59:52.053438"], ["id", 137]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 25], ["updated_at", "2015-11-19 22:59:52.058565"], ["id", 79]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 102ms (Views: 47.6ms | ActiveRecord: 22.9ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:59:56 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H8A9Pth0u5l7Pwg5misB0XzWrwU0vrzP/0yFqKxtNX2bz4LkEyZQwY/Ja604oAgOrf3Po4QYa4Mhk4OoTsN6pw==", "id"=>"79", "comparison_id"=>"25", "id1"=>"79", "id2"=>"137", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 25]]
+  [1m[36mPicture Load (0.4ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 79]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 137]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 137  [["comparison_id", 25]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 25]]
+  [1m[36mPicture Load (0.2ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 25]]
+  Rendered comparisons/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 62ms (Views: 50.3ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 17:59:59 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+z6YySxnWJbv21cDo99+/+H/MDxiTZe9qrL84AnrSkR/MScT5zWzzhstNJcBVHcgMNRQmtLrQPF0bfrg60UFng==", "id"=>"79", "comparison_id"=>"25", "id1"=>"79", "id2"=>"139", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 25]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 79]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 139]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 139  [["comparison_id", 25]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 25]]
+  [1m[36mPicture Load (0.2ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 25]]
+  Rendered comparisons/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 57ms (Views: 47.6ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 18:00:01 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GLtZMtGc2us2xSNT7L4YKH4Ko276v//s3NParEUIjV6ctOboGs4xs8IzQMdONRH3ryHDyEoZKKACDNysp6bChA==", "id"=>"79", "comparison_id"=>"25", "id1"=>"79", "id2"=>"172", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 25]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 79]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 172]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 172  [["comparison_id", 25]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 25]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 25]]
+  Rendered comparisons/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 58ms (Views: 49.4ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 18:00:03 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M04IkuG7X8AIxt+twRNMWRpB5+Fr1SLLK6TbzGFNVWW3QbdIKum0mPwwvDljmEWGy2qHR9tz9Yf1e93Mg+Mavw==", "id"=>"79", "comparison_id"=>"25", "id1"=>"79", "id2"=>"186", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.2ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 25]]
+  [1m[36mPicture Load (0.2ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 79]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 186]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 186  [["comparison_id", 25]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 25]]
+  Rendered comparisons/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 59ms (Views: 49.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users/create?utf8=%E2%9C%93&photo_url=http%3A%2F%2Fshinishikawa.com%2Fwp-content%2Fuploads%2F2015%2F08%2FKAE4075.jpg&user%5Bemail_address%5D=sophie.debenedetto%40gmail.com&commit=Get+your+photo" for ::1 at 2015-11-19 18:00:09 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "photo_url"=>"http://shinishikawa.com/wp-content/uploads/2015/08/KAE4075.jpg", "user"=>{"email_address"=>"sophie.debenedetto@gmail.com"}, "commit"=>"Get your photo"}
+Unpermitted parameter: email_address
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email_address", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email_address", "sophie.debenedetto@gmail.com"], ["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE4075.jpg"], ["created_at", "2015-11-19 23:00:09.622232"], ["updated_at", "2015-11-19 23:00:09.622232"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  Rendered user_mailer/result_email.html.erb within layouts/mailer (0.1ms)
+  Rendered user_mailer/result_email.text.erb within layouts/mailer (0.1ms)
+  Rendered user_mailer/result_email.html.erb within layouts/mailer (0.5ms)
+
+UserMailer#result_email: processed outbound mail in 534272.2ms
+
+Sent mail to sophie.debenedetto@gmail.com (8.0ms)
+Date: Thu, 19 Nov 2015 18:09:03 -0500
+From: jeffslutzky@gmail.com
+To: sophie.debenedetto@gmail.com
+Message-ID: <564e568fde9cb_f7323fd7909c2a50110ea@Jeffs-MacBook-Air.local.mail>
+Subject: Your favorite photo
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_564e5493c7982_f7323fd7909c2a5010978
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+
+http://shinishikawa.com/wp-content/uploads/2015/08/KAE4075.jpg
+
+----==_mimepart_564e5493c7982_f7323fd7909c2a5010978
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Hello!</h1>
+    <p>
+      Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+      
+    </p>
+  	<p>
+  		http://shinishikawa.com/wp-content/uploads/2015/08/KAE4075.jpg
+  	</p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_564e5493c7982_f7323fd7909c2a5010978
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Hello!</h1>
+    <p>
+      Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+      
+    </p>
+  	<p>
+  		http://shinishikawa.com/wp-content/uploads/2015/08/KAE4075.jpg
+  	</p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_564e5493c7982_f7323fd7909c2a5010978--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 537024ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2015-11-19 18:09:06 -0500
+Processing by ComparisonsController#index as HTML
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comparisons" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-11-19 23:09:06.714734"], ["updated_at", "2015-11-19 23:09:06.714734"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  Rendered comparisons/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 79ms (Views: 68.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/pictures?id=26" for ::1 at 2015-11-19 18:09:14 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mComparison Load (0.2ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 26]]
+  [1m[35mPicture Load (0.8ms)[0m  SELECT "pictures".* FROM "pictures"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 26], ["updated_at", "2015-11-19 23:09:14.533677"], ["id", 101]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 26], ["updated_at", "2015-11-19 23:09:14.538978"], ["id", 105]]
+  [1m[35m (3.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 26], ["updated_at", "2015-11-19 23:09:14.544751"], ["id", 10]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 26], ["updated_at", "2015-11-19 23:09:14.551924"], ["id", 112]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 26], ["updated_at", "2015-11-19 23:09:14.556917"], ["id", 131]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 88ms (Views: 45.6ms | ActiveRecord: 17.7ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 18:09:19 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JyYhZUGbEaJi5Fm3Jt0z3LHTco+GPdHGRFiUDHCjJ72jKZ6/isn6+pYSOiOEVjoDYPgSKTabBoqah5IMkg1oZw==", "id"=>"131", "comparison_id"=>"26", "id1"=>"131", "id2"=>"112", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 26]]
+  [1m[36mPicture Load (0.5ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 131]]
+  [1m[35mPicture Load (0.3ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 112]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 112  [["comparison_id", 26]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 26]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 26]]
+  Rendered comparisons/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 47ms (Views: 36.1ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 18:09:22 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"icUt+zmpknxfAx8VzJfDV2yWHtrhnlsj+uOO474V6aANypIh8vt5JKv1fIFuHMqIvb1+fFE4jG8kPIjjXLumeg==", "id"=>"131", "comparison_id"=>"26", "id1"=>"131", "id2"=>"105", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 26]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 131]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 105]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 105  [["comparison_id", 26]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 26]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 26]]
+  Rendered comparisons/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 57ms (Views: 49.4ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 18:09:24 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8Pu0pyY8iUspZ3ESdePv3627ZyqBtLXYYSm7ih0CL8F09At97W5iE92REobXaOYAfJAHjDESYpS/9r2K/6xgGw==", "id"=>"131", "comparison_id"=>"26", "id1"=>"131", "id2"=>"10", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 26]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 131]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 10  [["comparison_id", 26]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 26]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 26]]
+  Rendered comparisons/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 55ms (Views: 45.6ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 18:09:26 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s1SJd41XiC6oVRE4gaAwXt5g5meK406sd/Ia39j4MQ43WzatRgVjdlyjcqwjKzmBD0uGwTpFmeCpLRzfOlZ+1A==", "id"=>"131", "comparison_id"=>"26", "id1"=>"131", "id2"=>"101", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 26]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 131]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 101]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 101  [["comparison_id", 26]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 26]]
+  Rendered comparisons/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 57ms (Views: 51.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/create?utf8=%E2%9C%93&photo_url=http%3A%2F%2Fshinishikawa.com%2Fwp-content%2Fuploads%2F2015%2F08%2FKAE2082.jpg&user%5Bemail_address%5D=sophie.debenedetto%40gmail.com&commit=Get+your+photo" for ::1 at 2015-11-19 18:09:32 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "photo_url"=>"http://shinishikawa.com/wp-content/uploads/2015/08/KAE2082.jpg", "user"=>{"email_address"=>"sophie.debenedetto@gmail.com"}, "commit"=>"Get your photo"}
+Unpermitted parameter: email_address
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email_address", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email_address", "sophie.debenedetto@gmail.com"], ["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2082.jpg"], ["created_at", "2015-11-19 23:09:32.670304"], ["updated_at", "2015-11-19 23:09:32.670304"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  Rendered user_mailer/result_email.html.erb within layouts/mailer (0.1ms)
+  Rendered user_mailer/result_email.text.erb within layouts/mailer (4.0ms)
+
+UserMailer#result_email: processed outbound mail in 21433.5ms
+
+Sent mail to sophie.debenedetto@gmail.com (5.9ms)
+Date: Thu, 19 Nov 2015 18:09:54 -0500
+From: jeffslutzky@gmail.com
+To: sophie.debenedetto@gmail.com
+Message-ID: <564e56c21efcd_f7323fd7909c2a50112b2@Jeffs-MacBook-Air.local.mail>
+Subject: Your favorite photo
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_564e56c21e0b8_f7323fd7909c2a5011191";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_564e56c21e0b8_f7323fd7909c2a5011191
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+
+http://shinishikawa.com/wp-content/uploads/2015/08/KAE2082.jpg
+
+----==_mimepart_564e56c21e0b8_f7323fd7909c2a5011191
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Hello!</h1>
+    <p>
+      Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+      
+    </p>
+  	<p>
+  		http://shinishikawa.com/wp-content/uploads/2015/08/KAE2082.jpg
+  	</p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_564e56c21e0b8_f7323fd7909c2a5011191--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 105758ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/users/create?utf8=%E2%9C%93&photo_url=http%3A%2F%2Fshinishikawa.com%2Fwp-content%2Fuploads%2F2015%2F08%2FKAE2082.jpg&user%5Bemail_address%5D=sophie.debenedetto%40gmail.com&commit=Get+your+photo" for ::1 at 2015-11-19 18:11:18 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "photo_url"=>"http://shinishikawa.com/wp-content/uploads/2015/08/KAE2082.jpg", "user"=>{"email_address"=>"sophie.debenedetto@gmail.com"}, "commit"=>"Get your photo"}
+Unpermitted parameter: email_address
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email_address", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email_address", "sophie.debenedetto@gmail.com"], ["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE2082.jpg"], ["created_at", "2015-11-19 23:11:18.430066"], ["updated_at", "2015-11-19 23:11:18.430066"]]
+  [1m[35m (5.8ms)[0m  commit transaction
+  Rendered user_mailer/result_email.html.erb within layouts/mailer (0.0ms)
+  Rendered user_mailer/result_email.text.erb within layouts/mailer (0.0ms)
+
+UserMailer#result_email: processed outbound mail in 3916.5ms
+
+Sent mail to sophie.debenedetto@gmail.com (9.5ms)
+Date: Thu, 19 Nov 2015 18:11:22 -0500
+From: jeffslutzky@gmail.com
+To: sophie.debenedetto@gmail.com
+Message-ID: <564e571a5707b_f7323fd79087c3081144@Jeffs-MacBook-Air.local.mail>
+Subject: Your favorite photo
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_564e571a562e5_f7323fd79087c308113c2";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_564e571a562e5_f7323fd79087c308113c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+
+http://shinishikawa.com/wp-content/uploads/2015/08/KAE2082.jpg
+
+----==_mimepart_564e571a562e5_f7323fd79087c308113c2
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Hello!</h1>
+    <p>
+      Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+      
+    </p>
+  	<p>
+  		http://shinishikawa.com/wp-content/uploads/2015/08/KAE2082.jpg
+  	</p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_564e571a562e5_f7323fd79087c308113c2--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 5861ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/" for ::1 at 2015-11-19 18:11:24 -0500
+Processing by ComparisonsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comparisons" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-11-19 23:11:24.306773"], ["updated_at", "2015-11-19 23:11:24.306773"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  Rendered comparisons/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 50ms (Views: 44.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2015-11-19 18:13:14 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ComparisonsController#index as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "comparisons" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-11-19 23:13:14.749955"], ["updated_at", "2015-11-19 23:13:14.749955"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  Rendered comparisons/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 300ms (Views: 259.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/pictures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 18:13:15 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 18:13:15 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-19 18:13:15 -0500
+
+
+Started GET "/assets/favorites.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 18:13:15 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-19 18:13:15 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-19 18:13:15 -0500
+
+
+Started GET "/assets/comparisons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 18:13:15 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-19 18:13:15 -0500
+
+
+Started GET "/assets/picture.self-6c317ed7a2b4897fa44059af38ba5039ade765957acda81678f27a24e8f1f217.js?body=1" for ::1 at 2015-11-19 18:13:15 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-19 18:13:15 -0500
+
+
+Started GET "/pictures?id=28" for ::1 at 2015-11-19 18:13:16 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mComparison Load (0.2ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 28]]
+  [1m[35mPicture Load (0.8ms)[0m  SELECT "pictures".* FROM "pictures"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 28], ["updated_at", "2015-11-19 23:13:16.672399"], ["id", 167]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 28], ["updated_at", "2015-11-19 23:13:16.677684"], ["id", 32]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 28], ["updated_at", "2015-11-19 23:13:16.682336"], ["id", 16]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 28], ["updated_at", "2015-11-19 23:13:16.692975"], ["id", 71]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 28], ["updated_at", "2015-11-19 23:13:16.700441"], ["id", 49]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 180ms (Views: 75.7ms | ActiveRecord: 17.4ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 18:13:20 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bbSagG1Bfhgg3UeIqajBHd1xxid2F9PpyJJuPDeGuSDpuyVaphOVQNQrJBwLI8jCDFqmgcaxBKUWTWg81Sj2+g==", "id"=>"49", "comparison_id"=>"28", "id1"=>"49", "id2"=>"71", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.3ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 28]]
+  [1m[36mPicture Load (0.2ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 49]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 71]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 71  [["comparison_id", 28]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 28]]
+  [1m[36mPicture Load (0.2ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 28]]
+  Rendered comparisons/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 113ms (Views: 61.9ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 18:13:23 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0G7EYWXkfyxl803sUVD4SaH+01FP24WBh4jFR8Ic3VpUYXu7rraUdJEFLnjz2/GWcNWz9/99Us1ZV8NHILKSgA==", "id"=>"49", "comparison_id"=>"28", "id1"=>"49", "id2"=>"167", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.2ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 28]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 49]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 167]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 167  [["comparison_id", 28]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 28]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 28]]
+  Rendered comparisons/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 61ms (Views: 52.6ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 18:13:25 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X8selYpywoyLyPQf/VwOpGd0dxupUFG5M9UymdDSCV3bxKFPQSAp1H8+l4tf1wd7tl8XvRn2hvXtCjSZMnxGhw==", "id"=>"49", "comparison_id"=>"28", "id1"=>"49", "id2"=>"32", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 28]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 49]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 32]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 32  [["comparison_id", 28]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 28]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 28]]
+  Rendered comparisons/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 47ms (Views: 38.7ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 18:13:28 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BBP3NlCyNNj0gu4B9bo9oHGyXRnhsR03irBWWTn03VqAHEjsm+DfgAB0jZVXMTR/oJk9v1EXyntUb1BZ21qSgA==", "id"=>"49", "comparison_id"=>"28", "id1"=>"49", "id2"=>"16", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 28]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 49]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 16  [["comparison_id", 28]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 28]]
+  Rendered comparisons/result.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 73ms (Views: 65.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/create?utf8=%E2%9C%93&photo_url=http%3A%2F%2Fshinishikawa.com%2Fwp-content%2Fuploads%2F2015%2F08%2FKAE6358.jpg&user%5Bemail_address%5D=sophie.debenedetto%40gmail.com&commit=Get+your+photo" for ::1 at 2015-11-19 18:13:38 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "photo_url"=>"http://shinishikawa.com/wp-content/uploads/2015/08/KAE6358.jpg", "user"=>{"email_address"=>"sophie.debenedetto@gmail.com"}, "commit"=>"Get your photo"}
+Unpermitted parameter: email_address
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email_address", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email_address", "sophie.debenedetto@gmail.com"], ["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE6358.jpg"], ["created_at", "2015-11-19 23:13:38.130384"], ["updated_at", "2015-11-19 23:13:38.130384"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  Rendered user_mailer/result_email.html.erb within layouts/mailer (1.5ms)
+  Rendered user_mailer/result_email.text.erb within layouts/mailer (0.4ms)
+
+UserMailer#result_email: processed outbound mail in 4448.9ms
+
+Sent mail to sophie.debenedetto@gmail.com (1758.9ms)
+Date: Thu, 19 Nov 2015 18:13:42 -0500
+From: jeffslutzky@gmail.com
+To: sophie.debenedetto@gmail.com
+Message-ID: <564e57a695d39_f8f33fcb92a635a4907cc@Jeffs-MacBook-Air.local.mail>
+Subject: Your favorite photo
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_564e57a6926f8_f8f33fcb92a635a49061d";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_564e57a6926f8_f8f33fcb92a635a49061d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+
+http://shinishikawa.com/wp-content/uploads/2015/08/KAE6358.jpg
+
+----==_mimepart_564e57a6926f8_f8f33fcb92a635a49061d
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Hello!</h1>
+    <p>
+      Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+      
+    </p>
+  	<p>
+  		http://shinishikawa.com/wp-content/uploads/2015/08/KAE6358.jpg
+  	</p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_564e57a6926f8_f8f33fcb92a635a49061d--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 207508ms (ActiveRecord: 2.8ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 18:17:05 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BBP3NlCyNNj0gu4B9bo9oHGyXRnhsR03irBWWTn03VqAHEjsm+DfgAB0jZVXMTR/oJk9v1EXyntUb1BZ21qSgA==", "id"=>"49", "comparison_id"=>"28", "id1"=>"49", "id2"=>"16", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 28]]
+  [1m[36mPicture Load (0.2ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 49]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 16  [["comparison_id", 28]]
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 28]]
+  Rendered comparisons/result.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 96ms (Views: 73.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/comparisons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 18:17:06 -0500
+
+
+Started GET "/assets/pictures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 18:17:06 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 18:17:06 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-19 18:17:06 -0500
+
+
+Started GET "/assets/favorites.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 18:17:06 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-19 18:17:06 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-19 18:17:06 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-19 18:17:06 -0500
+
+
+Started GET "/assets/picture.self-6c317ed7a2b4897fa44059af38ba5039ade765957acda81678f27a24e8f1f217.js?body=1" for ::1 at 2015-11-19 18:17:06 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-19 18:17:06 -0500
+
+
+Started GET "/" for ::1 at 2015-11-19 18:17:11 -0500
+Processing by ComparisonsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comparisons" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-11-19 23:17:11.780961"], ["updated_at", "2015-11-19 23:17:11.780961"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  Rendered comparisons/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 46ms (Views: 39.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/pictures?id=29" for ::1 at 2015-11-19 18:17:19 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"29"}
+  [1m[35mComparison Load (0.2ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 29]]
+  [1m[36mPicture Load (0.9ms)[0m  [1mSELECT "pictures".* FROM "pictures"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 29], ["updated_at", "2015-11-19 23:17:19.420349"], ["id", 25]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 29], ["updated_at", "2015-11-19 23:17:19.425481"], ["id", 127]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 29], ["updated_at", "2015-11-19 23:17:19.429961"], ["id", 59]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 29], ["updated_at", "2015-11-19 23:17:19.434409"], ["id", 47]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 29], ["updated_at", "2015-11-19 23:17:19.439926"], ["id", 199]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  Rendered pictures/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 77ms (Views: 44.3ms | ActiveRecord: 15.0ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 18:17:27 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/nERpfgjYGKGLSyLeTeZgs06+GA1Zh5oANG8tcrAWK56fq5/M3GLOnLbTx/bvJBdHBGYxoXAySTeDrq1KG4XdA==", "id"=>"199", "comparison_id"=>"29", "id1"=>"199", "id2"=>"47", "commit"=>"Pick"}
+  [1m[36mComparison Load (0.2ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 29]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 199]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 47]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 47[0m  [["comparison_id", 29]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 29]]
+  [1m[35mPicture Load (0.5ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 29]]
+  Rendered comparisons/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 76ms (Views: 64.7ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 18:17:34 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kf2vLzFXr99uUY45VFV01pCNNHLlb+QrSM6YNeQ9KFEV8hD1+gVEh5qn7a323n0JQaZU1FXJM2eWEZ41BpNniw==", "id"=>"199", "comparison_id"=>"29", "id1"=>"199", "id2"=>"25", "commit"=>"Pick"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 29]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 199]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 25]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 25[0m  [["comparison_id", 29]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 29]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 29]]
+  Rendered comparisons/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 71ms (Views: 60.0ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 18:17:40 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CJupg0MtT5W+hsyQ3VGswW5vy8cRiaHdC945VJs/DGiMlBZZiH+kzUpwrwR/2qUev0SrYaEvdpHVAT9UeZFDsg==", "id"=>"199", "comparison_id"=>"29", "id1"=>"199", "id2"=>"127", "commit"=>"Pick"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 29]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 199]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 127]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 127[0m  [["comparison_id", 29]]
+  [1m[35m (4.0ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 29]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 29]]
+  Rendered comparisons/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 72ms (Views: 61.3ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-19 18:17:45 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k9w54gE2bSdQQzvd5YUYx9o5eh4sn9L5EIbfKjfzUpoX04Y4ymSGf6S1WElHDhEYCxIauJw5BbXOWdkq1V0dQA==", "id"=>"199", "comparison_id"=>"29", "id1"=>"199", "id2"=>"59", "commit"=>"Pick"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 29]]
+  [1m[35mPicture Load (0.3ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 199]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 59]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 59[0m  [["comparison_id", 29]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 29]]
+  Rendered comparisons/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 63ms (Views: 52.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users/create?utf8=%E2%9C%93&photo_url=http%3A%2F%2Fshinishikawa.com%2Fwp-content%2Fuploads%2F2015%2F08%2FKAE4963.jpg&user%5Bemail_address%5D=bhgojima%40gmail.com&commit=Get+your+photo" for ::1 at 2015-11-19 18:17:56 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "photo_url"=>"http://shinishikawa.com/wp-content/uploads/2015/08/KAE4963.jpg", "user"=>{"email_address"=>"bhgojima@gmail.com"}, "commit"=>"Get your photo"}
+Unpermitted parameter: email_address
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email_address", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email_address", "bhgojima@gmail.com"], ["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE4963.jpg"], ["created_at", "2015-11-19 23:17:56.290013"], ["updated_at", "2015-11-19 23:17:56.290013"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  Rendered user_mailer/result_email.html.erb within layouts/mailer (0.1ms)
+  Rendered user_mailer/result_email.text.erb within layouts/mailer (0.1ms)
+
+UserMailer#result_email: processed outbound mail in 36.2ms
+
+Sent mail to bhgojima@gmail.com (913.0ms)
+Date: Thu, 19 Nov 2015 18:17:56 -0500
+From: jeffslutzky@gmail.com
+To: bhgojima@gmail.com
+Message-ID: <564e58a456406_f8f33fcb959ec8849099@Jeffs-MacBook-Air.local.mail>
+Subject: Your favorite photo
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_564e58a4553d6_f8f33fcb959ec88490897";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_564e58a4553d6_f8f33fcb959ec88490897
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+
+http://shinishikawa.com/wp-content/uploads/2015/08/KAE4963.jpg
+
+----==_mimepart_564e58a4553d6_f8f33fcb959ec88490897
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Hello!</h1>
+    <p>
+      Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+      
+    </p>
+  	<p>
+  		http://shinishikawa.com/wp-content/uploads/2015/08/KAE4963.jpg
+  	</p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_564e58a4553d6_f8f33fcb959ec88490897--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 6928ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2015-11-19 18:18:03 -0500
+Processing by ComparisonsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comparisons" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-11-19 23:18:03.224739"], ["updated_at", "2015-11-19 23:18:03.224739"]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  Rendered comparisons/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 60ms (Views: 54.0ms | ActiveRecord: 3.2ms)
