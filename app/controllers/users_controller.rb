@@ -2,9 +2,9 @@ class UsersController < ApplicationController
 
 def create
     @user = User.new(user_params)
- 
     respond_to do |format|
     	@user.email_address = params[:user][:email_address]
+      @user.photo_url = params[:photo_url]
       if @user.save
         # Tell the UserMailer to send a welcome email after save
         UserMailer.result_email(@user).deliver_now
@@ -22,7 +22,7 @@ def create
 private
 
 def user_params
-	params.require(:user).permit(user: [:email_address, :photo_url])
+	params.require(:user).permit(user: [:email_address, :photo_url] )
 end
 
 end

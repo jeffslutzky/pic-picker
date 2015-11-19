@@ -4,8 +4,7 @@ class UserMailer < ApplicationMailer
 	def result_email(user)
 		binding.pry
 		@user = user
-		@url  = "@picture_chosen.photo_url"
-		# need to pass along the url; user has_many favorites?
+		@url  = user.photo_url
     mail(to: @user.email_address, subject: 'Your favorite photo')
 	end
 
