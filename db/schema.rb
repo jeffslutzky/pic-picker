@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20151111235932) do
   end
 
   create_table "pictures", force: :cascade do |t|
-    t.integer  "favroite_id"
+    t.integer  "favorite_id"
     t.integer  "comparison_id"
     t.string   "photo_url"
     t.datetime "created_at",    null: false
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20151111235932) do
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email_address"
+    t.string   "photo_url"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
