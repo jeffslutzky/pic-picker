@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
   root 'comparisons#index'
   get 'users/create', to: 'users#create'
+  
   resources :comparisons
   resources :pictures
 
