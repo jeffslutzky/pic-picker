@@ -1,3 +1,6 @@
+<center>
+
+
 <h2>Congratulations!!! Now send this picture to your e-mail address</h2>
 
 
@@ -7,7 +10,11 @@
 <!-- create a /mail route which will go to the controller - that controller method will call the mailer -->
 
 <%= form_tag("users/create", method: "get") do %>
+<img class="animated bounceInLeft" src="<%=@picture_chosen.photo_url%>" style="width:304px;">
+<div>
 	<%= hidden_field_tag(:photo_url, @picture_chosen.photo_url) %>
 	<%= email_field(:user, :email_address) %>
 	<%= submit_tag("Get your photo") %>
 <% end %>
+</div>
+<center>

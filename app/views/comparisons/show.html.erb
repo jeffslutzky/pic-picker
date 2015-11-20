@@ -1,20 +1,20 @@
-
+<center>
 <h2>Picture(second)</h2>
 
 
 <%=form_tag(comparisons_path) do %>
-<div class="animated bounceInRight">
-<img src="<%=@picture_chosen.photo_url%>" style="width:304px;">
-</div>
 
+<img id="first-pic" class="animated bounceInLeft" src="<%=@picture_chosen.photo_url%>" style="width:400px;">
+<img class="animated bounceInRight" src="<%=@second_pic.photo_url%>" style="width:400px;">
+
+<div>
 <%= radio_button_tag :id, @picture_chosen.id  %>
 <%=label_tag(:id, "Like it better")%>
 
-<div class="animated bounceInLeft">
-<img src="<%=@second_pic.photo_url%>" style="width:304px;">
-</div>
+
 <%= radio_button_tag :id, @second_pic.id %>
 <%=label_tag(:id, "Like it better")%>
+</div>
 
 <%= hidden_field_tag 'comparison_id', @picture_chosen.comparison_id %>
 <%= hidden_field_tag 'id1', @picture_chosen.id %>
@@ -26,3 +26,4 @@
 </div>
 
 <%end%>
+</center>
