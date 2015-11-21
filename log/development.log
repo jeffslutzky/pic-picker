@@ -32021,3 +32021,1257 @@ Started GET "/assets/picture.self-a4c4e715f17006b5b6f38e7f13eef5703aba40822ce239
 
 
 Started GET "/assets/animate.self-5b559948b20de4f22bb241ecc56135cd47899f3117bb0d57336a7209449c6c2a.css?body=1" for ::1 at 2015-11-20 12:04:16 -0500
+
+
+Started GET "/" for ::1 at 2015-11-20 17:21:46 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ComparisonsController#index as HTML
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "comparisons" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-11-20 22:21:47.251576"], ["updated_at", "2015-11-20 22:21:47.251576"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  Rendered comparisons/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 240ms (Views: 210.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/pictures?id=19" for ::1 at 2015-11-20 17:21:52 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mComparison Load (0.2ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mPicture Load (0.6ms)[0m  SELECT "pictures".* FROM "pictures"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 19], ["updated_at", "2015-11-20 22:21:52.231672"], ["id", 48]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 19], ["updated_at", "2015-11-20 22:21:52.235877"], ["id", 150]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 19], ["updated_at", "2015-11-20 22:21:52.238407"], ["id", 30]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 19], ["updated_at", "2015-11-20 22:21:52.240684"], ["id", 162]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 19], ["updated_at", "2015-11-20 22:21:52.243566"], ["id", 185]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 110ms (Views: 54.5ms | ActiveRecord: 6.9ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-20 17:22:00 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uxXFbY1DEGbseOWp8LmOdn6emXd92Re6rkKMMTw56+Om1yQb4OnIobjgKJe/PSraZ4Rmr1N4J7bdernXEthbEw==", "id"=>"162", "comparison_id"=>"19", "id1"=>"185", "id2"=>"162", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 162]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 185]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 185  [["comparison_id", 19]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 19]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 19]]
+  Rendered comparisons/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 71ms (Views: 43.2ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-20 17:22:08 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZDFddoi5GM1VzEDMyuZ3auc6D2LXArav1oEFwOKP3Bd587wA5RPACgFUjfKFYtPG/iDwuvmjhqOluTAmzG5s5w==", "id"=>"162", "comparison_id"=>"19", "id1"=>"162", "id2"=>"150", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 162]]
+  [1m[35mPicture Load (0.0ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 150]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 150  [["comparison_id", 19]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 19]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 19]]
+  Rendered comparisons/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 59ms (Views: 50.5ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-20 17:22:14 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9smwexBBX+gt6VzXYousGzvjXSzCUw9NejjiXS/yyiTrC1ENfeuHL3lxkektDwi3Ivmi9OzyP0EJANe7ARN61A==", "id"=>"162", "comparison_id"=>"19", "id1"=>"162", "id2"=>"48", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 162]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 48]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 48  [["comparison_id", 19]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 19]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 19]]
+  Rendered comparisons/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 61ms (Views: 51.5ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-20 17:22:18 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bjiUFS21XiNmOSsA/CwhKeEH9LjRKZ08BMOqR6a1YDtz+nVjQB+G5DKh5j6zqIWF+B0LYP+IrTB3+5+hiFTQyw==", "id"=>"30", "comparison_id"=>"19", "id1"=>"162", "id2"=>"30", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.2ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 30]]
+  [1m[35mPicture Load (0.0ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 162]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.6ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 162  [["comparison_id", 19]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 19]]
+  Rendered comparisons/result.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 57ms (Views: 46.2ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/" for ::1 at 2015-11-20 17:23:14 -0500
+Processing by ComparisonsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "comparisons" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-11-20 22:23:14.324042"], ["updated_at", "2015-11-20 22:23:14.324042"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  Rendered comparisons/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 47ms (Views: 42.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/pictures?id=20" for ::1 at 2015-11-20 17:23:15 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36mPicture Load (0.6ms)[0m  [1mSELECT "pictures".* FROM "pictures"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 20], ["updated_at", "2015-11-20 22:23:15.531065"], ["id", 151]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 20], ["updated_at", "2015-11-20 22:23:15.534491"], ["id", 116]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 20], ["updated_at", "2015-11-20 22:23:15.536869"], ["id", 175]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 20], ["updated_at", "2015-11-20 22:23:15.539932"], ["id", 111]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 20], ["updated_at", "2015-11-20 22:23:15.542400"], ["id", 75]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  Rendered pictures/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 52ms (Views: 33.2ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-20 17:23:20 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H4CPtDvj/q31m5C2ZeC1AJY4BqIZS6ttIcaS2cjpWycCQm7CVkkmaqEDXYgqZBGsjyL5ejfqm2FS/qc/5gjr1w==", "id"=>"75", "comparison_id"=>"20", "id1"=>"75", "id2"=>"111", "commit"=>"Pick"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 75]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 111]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 111[0m  [["comparison_id", 20]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 20]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 20]]
+  Rendered comparisons/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 40ms (Views: 33.3ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-20 17:23:24 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Au1MSixumQJ2U3XSpBzkG//+wrFsuck9vCW0vk6Rtr0fL608QcRBxSLLuOzrmEC35uQ9aUIY+THPHYFYYHAGTQ==", "id"=>"151", "comparison_id"=>"20", "id1"=>"75", "id2"=>"151", "commit"=>"Pick"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 151]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 75]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 75[0m  [["comparison_id", 20]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 20]]
+  [1m[35mPicture Load (0.2ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 20]]
+  Rendered comparisons/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 41ms (Views: 33.7ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-20 17:23:28 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y1KfhWkq6bGZHSbsgjixAXnOQuyl/r0xV1NhMMrxlZR+kH7zBIAxds2F69LNvBWtYNS9NItfjT0ka1TW5BAlZA==", "id"=>"116", "comparison_id"=>"20", "id1"=>"151", "id2"=>"116", "commit"=>"Pick"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 116]]
+  [1m[36mPicture Load (0.0ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 151]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 151[0m  [["comparison_id", 20]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 20]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 20]]
+  Rendered comparisons/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 43ms (Views: 36.5ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-20 17:23:34 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y6FMEzJS0u7r9+sGogtctoLoO57bFUoOZ9Er7aGwNyV+Y61lX/gKKb9vJjjtj/gam/LERvW0egIU6R4Lj1GH1Q==", "id"=>"175", "comparison_id"=>"20", "id1"=>"116", "id2"=>"175", "commit"=>"Pick"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 175]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 116]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 116[0m  [["comparison_id", 20]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 20]]
+  Rendered comparisons/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 53ms (Views: 46.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2015-11-20 17:23:40 -0500
+Processing by ComparisonsController#index as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comparisons" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-11-20 22:23:40.459748"], ["updated_at", "2015-11-20 22:23:40.459748"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  Rendered comparisons/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 57ms (Views: 52.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/pictures?id=21" for ::1 at 2015-11-20 17:23:41 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 21]]
+  [1m[35mPicture Load (0.6ms)[0m  SELECT "pictures".* FROM "pictures"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 21], ["updated_at", "2015-11-20 22:23:41.723154"], ["id", 165]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 21], ["updated_at", "2015-11-20 22:23:41.726081"], ["id", 30]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 21], ["updated_at", "2015-11-20 22:23:41.729210"], ["id", 178]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 21], ["updated_at", "2015-11-20 22:23:41.731644"], ["id", 93]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 21], ["updated_at", "2015-11-20 22:23:41.734189"], ["id", 154]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 50ms (Views: 32.7ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for ::1 at 2015-11-20 17:25:50 -0500
+Processing by ComparisonsController#index as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "comparisons" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-11-20 22:25:50.808072"], ["updated_at", "2015-11-20 22:25:50.808072"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  Rendered comparisons/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 42ms (Views: 37.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/pictures?id=22" for ::1 at 2015-11-20 17:26:43 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 22]]
+  [1m[35mPicture Load (0.6ms)[0m  SELECT "pictures".* FROM "pictures"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:26:43.744340"], ["id", 143]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:26:43.747627"], ["id", 177]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:26:43.750042"], ["id", 28]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:26:43.753621"], ["id", 100]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:26:43.756169"], ["id", 144]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 54ms (Views: 35.6ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/pictures?id=22" for ::1 at 2015-11-20 17:38:20 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 22]]
+  [1m[36mPicture Load (0.5ms)[0m  [1mSELECT "pictures".* FROM "pictures"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:20.032787"], ["id", 161]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:20.036127"], ["id", 154]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:20.038356"], ["id", 101]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  Rendered pictures/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 42ms (Views: 29.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/animate.self-5b559948b20de4f22bb241ecc56135cd47899f3117bb0d57336a7209449c6c2a.css?body=1" for ::1 at 2015-11-20 17:38:20 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-20 17:38:20 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-20 17:38:20 -0500
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-11-20 17:38:20 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-20 17:38:20 -0500
+
+
+Started GET "/assets/journal.self-bde415e0f869cec940d148c1253cd98ed8ac07c707bb4e7a5321b80654e3b64f.css?body=1" for ::1 at 2015-11-20 17:38:20 -0500
+
+
+Started GET "/assets/picture.self-a4c4e715f17006b5b6f38e7f13eef5703aba40822ce239d4d9ffad1ebec0d332.js?body=1" for ::1 at 2015-11-20 17:38:20 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-20 17:38:20 -0500
+
+
+Started GET "/pictures?id=22" for ::1 at 2015-11-20 17:38:23 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 22]]
+  [1m[35mPicture Load (0.8ms)[0m  SELECT "pictures".* FROM "pictures"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:23.918627"], ["id", 94]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:23.921976"], ["id", 2]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:23.924804"], ["id", 52]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:23.927103"], ["id", 35]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:23.929813"], ["id", 160]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 52ms (Views: 33.3ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/animate.self-5b559948b20de4f22bb241ecc56135cd47899f3117bb0d57336a7209449c6c2a.css?body=1" for ::1 at 2015-11-20 17:38:23 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-20 17:38:23 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-20 17:38:23 -0500
+
+
+Started GET "/assets/journal.self-bde415e0f869cec940d148c1253cd98ed8ac07c707bb4e7a5321b80654e3b64f.css?body=1" for ::1 at 2015-11-20 17:38:24 -0500
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-11-20 17:38:24 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-20 17:38:24 -0500
+
+
+Started GET "/assets/picture.self-a4c4e715f17006b5b6f38e7f13eef5703aba40822ce239d4d9ffad1ebec0d332.js?body=1" for ::1 at 2015-11-20 17:38:24 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-20 17:38:24 -0500
+
+
+Started GET "/pictures?id=22" for ::1 at 2015-11-20 17:38:27 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 22]]
+  [1m[36mPicture Load (0.6ms)[0m  [1mSELECT "pictures".* FROM "pictures"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:27.292546"], ["id", 102]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:27.296423"], ["id", 185]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:27.299233"], ["id", 120]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:27.301685"], ["id", 73]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:27.304808"], ["id", 124]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  Rendered pictures/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 50ms (Views: 31.8ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/assets/journal.self-bde415e0f869cec940d148c1253cd98ed8ac07c707bb4e7a5321b80654e3b64f.css?body=1" for ::1 at 2015-11-20 17:38:27 -0500
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-11-20 17:38:27 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-20 17:38:27 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-20 17:38:27 -0500
+
+
+Started GET "/assets/animate.self-5b559948b20de4f22bb241ecc56135cd47899f3117bb0d57336a7209449c6c2a.css?body=1" for ::1 at 2015-11-20 17:38:27 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-20 17:38:27 -0500
+
+
+Started GET "/assets/picture.self-a4c4e715f17006b5b6f38e7f13eef5703aba40822ce239d4d9ffad1ebec0d332.js?body=1" for ::1 at 2015-11-20 17:38:27 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-20 17:38:27 -0500
+
+
+Started GET "/pictures?id=22" for ::1 at 2015-11-20 17:38:29 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 22]]
+  [1m[35mPicture Load (0.6ms)[0m  SELECT "pictures".* FROM "pictures"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:29.286419"], ["id", 43]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:29.289861"], ["id", 182]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:29.292169"], ["id", 140]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:29.294812"], ["id", 187]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:29.297258"], ["id", 147]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 46ms (Views: 28.8ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/assets/animate.self-5b559948b20de4f22bb241ecc56135cd47899f3117bb0d57336a7209449c6c2a.css?body=1" for ::1 at 2015-11-20 17:38:29 -0500
+
+
+Started GET "/assets/journal.self-bde415e0f869cec940d148c1253cd98ed8ac07c707bb4e7a5321b80654e3b64f.css?body=1" for ::1 at 2015-11-20 17:38:29 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-20 17:38:29 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-20 17:38:29 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-20 17:38:29 -0500
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-11-20 17:38:29 -0500
+
+
+Started GET "/assets/picture.self-a4c4e715f17006b5b6f38e7f13eef5703aba40822ce239d4d9ffad1ebec0d332.js?body=1" for ::1 at 2015-11-20 17:38:29 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-20 17:38:29 -0500
+
+
+Started GET "/pictures?id=22" for ::1 at 2015-11-20 17:38:31 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 22]]
+  [1m[36mPicture Load (0.6ms)[0m  [1mSELECT "pictures".* FROM "pictures"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:31.964730"], ["id", 126]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:31.968394"], ["id", 90]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:31.971061"], ["id", 6]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:31.973251"], ["id", 25]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 51ms (Views: 35.7ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/assets/animate.self-5b559948b20de4f22bb241ecc56135cd47899f3117bb0d57336a7209449c6c2a.css?body=1" for ::1 at 2015-11-20 17:38:32 -0500
+
+
+Started GET "/assets/journal.self-bde415e0f869cec940d148c1253cd98ed8ac07c707bb4e7a5321b80654e3b64f.css?body=1" for ::1 at 2015-11-20 17:38:32 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-20 17:38:32 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-20 17:38:32 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-20 17:38:32 -0500
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-11-20 17:38:32 -0500
+
+
+Started GET "/assets/picture.self-a4c4e715f17006b5b6f38e7f13eef5703aba40822ce239d4d9ffad1ebec0d332.js?body=1" for ::1 at 2015-11-20 17:38:32 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-20 17:38:32 -0500
+
+
+Started GET "/pictures?id=22" for ::1 at 2015-11-20 17:38:34 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 22]]
+  [1m[36mPicture Load (0.7ms)[0m  [1mSELECT "pictures".* FROM "pictures"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:34.870456"], ["id", 16]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:34.873669"], ["id", 20]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:34.876073"], ["id", 82]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:34.878907"], ["id", 19]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:34.881141"], ["id", 150]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  Rendered pictures/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 48ms (Views: 31.4ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/assets/animate.self-5b559948b20de4f22bb241ecc56135cd47899f3117bb0d57336a7209449c6c2a.css?body=1" for ::1 at 2015-11-20 17:38:34 -0500
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-11-20 17:38:34 -0500
+
+
+Started GET "/assets/journal.self-bde415e0f869cec940d148c1253cd98ed8ac07c707bb4e7a5321b80654e3b64f.css?body=1" for ::1 at 2015-11-20 17:38:34 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-20 17:38:34 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-20 17:38:34 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-20 17:38:34 -0500
+
+
+Started GET "/assets/picture.self-a4c4e715f17006b5b6f38e7f13eef5703aba40822ce239d4d9ffad1ebec0d332.js?body=1" for ::1 at 2015-11-20 17:38:34 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-20 17:38:34 -0500
+
+
+Started GET "/pictures?id=22" for ::1 at 2015-11-20 17:38:36 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 22]]
+  [1m[35mPicture Load (0.7ms)[0m  SELECT "pictures".* FROM "pictures"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:36.718911"], ["id", 61]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:36.722227"], ["id", 127]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:36.724972"], ["id", 199]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:36.727485"], ["id", 139]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:36.729849"], ["id", 71]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 50ms (Views: 32.7ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/animate.self-5b559948b20de4f22bb241ecc56135cd47899f3117bb0d57336a7209449c6c2a.css?body=1" for ::1 at 2015-11-20 17:38:36 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-20 17:38:36 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-20 17:38:36 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-20 17:38:36 -0500
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-11-20 17:38:36 -0500
+
+
+Started GET "/assets/journal.self-bde415e0f869cec940d148c1253cd98ed8ac07c707bb4e7a5321b80654e3b64f.css?body=1" for ::1 at 2015-11-20 17:38:36 -0500
+
+
+Started GET "/assets/picture.self-a4c4e715f17006b5b6f38e7f13eef5703aba40822ce239d4d9ffad1ebec0d332.js?body=1" for ::1 at 2015-11-20 17:38:36 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-20 17:38:36 -0500
+
+
+Started GET "/pictures?id=22" for ::1 at 2015-11-20 17:38:38 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 22]]
+  [1m[36mPicture Load (0.5ms)[0m  [1mSELECT "pictures".* FROM "pictures"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:38.925279"], ["id", 95]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:38.929166"], ["id", 99]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:38.932321"], ["id", 175]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:38.934617"], ["id", 133]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 53ms (Views: 37.5ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/animate.self-5b559948b20de4f22bb241ecc56135cd47899f3117bb0d57336a7209449c6c2a.css?body=1" for ::1 at 2015-11-20 17:38:38 -0500
+
+
+Started GET "/assets/journal.self-bde415e0f869cec940d148c1253cd98ed8ac07c707bb4e7a5321b80654e3b64f.css?body=1" for ::1 at 2015-11-20 17:38:38 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-20 17:38:39 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-20 17:38:39 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-20 17:38:39 -0500
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-11-20 17:38:39 -0500
+
+
+Started GET "/assets/picture.self-a4c4e715f17006b5b6f38e7f13eef5703aba40822ce239d4d9ffad1ebec0d332.js?body=1" for ::1 at 2015-11-20 17:38:39 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-20 17:38:39 -0500
+
+
+Started GET "/pictures?id=22" for ::1 at 2015-11-20 17:38:40 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mComparison Load (0.3ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 22]]
+  [1m[36mPicture Load (0.7ms)[0m  [1mSELECT "pictures".* FROM "pictures"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:40.734816"], ["id", 9]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:40.739070"], ["id", 37]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:40.741526"], ["id", 149]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:40.744699"], ["id", 92]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 48ms (Views: 31.4ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/assets/animate.self-5b559948b20de4f22bb241ecc56135cd47899f3117bb0d57336a7209449c6c2a.css?body=1" for ::1 at 2015-11-20 17:38:40 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-20 17:38:40 -0500
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-11-20 17:38:40 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-20 17:38:40 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-20 17:38:40 -0500
+
+
+Started GET "/assets/journal.self-bde415e0f869cec940d148c1253cd98ed8ac07c707bb4e7a5321b80654e3b64f.css?body=1" for ::1 at 2015-11-20 17:38:40 -0500
+
+
+Started GET "/assets/picture.self-a4c4e715f17006b5b6f38e7f13eef5703aba40822ce239d4d9ffad1ebec0d332.js?body=1" for ::1 at 2015-11-20 17:38:40 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-20 17:38:40 -0500
+
+
+Started GET "/pictures?id=22" for ::1 at 2015-11-20 17:38:42 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 22]]
+  [1m[36mPicture Load (0.6ms)[0m  [1mSELECT "pictures".* FROM "pictures"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:42.597254"], ["id", 89]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:42.600619"], ["id", 194]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:42.604069"], ["id", 42]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:42.606829"], ["id", 188]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 49ms (Views: 33.5ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-11-20 17:38:42 -0500
+
+
+Started GET "/assets/animate.self-5b559948b20de4f22bb241ecc56135cd47899f3117bb0d57336a7209449c6c2a.css?body=1" for ::1 at 2015-11-20 17:38:42 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-20 17:38:42 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-20 17:38:42 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-20 17:38:42 -0500
+
+
+Started GET "/assets/journal.self-bde415e0f869cec940d148c1253cd98ed8ac07c707bb4e7a5321b80654e3b64f.css?body=1" for ::1 at 2015-11-20 17:38:42 -0500
+
+
+Started GET "/assets/picture.self-a4c4e715f17006b5b6f38e7f13eef5703aba40822ce239d4d9ffad1ebec0d332.js?body=1" for ::1 at 2015-11-20 17:38:42 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-20 17:38:42 -0500
+
+
+Started GET "/pictures?id=22" for ::1 at 2015-11-20 17:38:44 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 22]]
+  [1m[36mPicture Load (0.6ms)[0m  [1mSELECT "pictures".* FROM "pictures"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:44.477939"], ["id", 59]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:44.481295"], ["id", 141]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:44.484919"], ["id", 159]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  Rendered pictures/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 44ms (Views: 30.2ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/animate.self-5b559948b20de4f22bb241ecc56135cd47899f3117bb0d57336a7209449c6c2a.css?body=1" for ::1 at 2015-11-20 17:38:44 -0500
+
+
+Started GET "/assets/journal.self-bde415e0f869cec940d148c1253cd98ed8ac07c707bb4e7a5321b80654e3b64f.css?body=1" for ::1 at 2015-11-20 17:38:44 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-20 17:38:44 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-20 17:38:44 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-20 17:38:44 -0500
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-11-20 17:38:44 -0500
+
+
+Started GET "/assets/picture.self-a4c4e715f17006b5b6f38e7f13eef5703aba40822ce239d4d9ffad1ebec0d332.js?body=1" for ::1 at 2015-11-20 17:38:44 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-20 17:38:44 -0500
+
+
+Started GET "/pictures?id=22" for ::1 at 2015-11-20 17:38:46 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 22]]
+  [1m[35mPicture Load (0.6ms)[0m  SELECT "pictures".* FROM "pictures"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:46.781781"], ["id", 74]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:46.786618"], ["id", 3]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:46.788760"], ["id", 191]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 45ms (Views: 31.6ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/animate.self-5b559948b20de4f22bb241ecc56135cd47899f3117bb0d57336a7209449c6c2a.css?body=1" for ::1 at 2015-11-20 17:38:46 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-20 17:38:46 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-20 17:38:46 -0500
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-11-20 17:38:46 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-20 17:38:46 -0500
+
+
+Started GET "/assets/journal.self-bde415e0f869cec940d148c1253cd98ed8ac07c707bb4e7a5321b80654e3b64f.css?body=1" for ::1 at 2015-11-20 17:38:46 -0500
+
+
+Started GET "/assets/picture.self-a4c4e715f17006b5b6f38e7f13eef5703aba40822ce239d4d9ffad1ebec0d332.js?body=1" for ::1 at 2015-11-20 17:38:46 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-20 17:38:46 -0500
+
+
+Started GET "/pictures?id=22" for ::1 at 2015-11-20 17:38:48 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 22]]
+  [1m[36mPicture Load (0.8ms)[0m  [1mSELECT "pictures".* FROM "pictures"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:48.254528"], ["id", 142]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:48.257659"], ["id", 33]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:48.262634"], ["id", 34]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:48.266497"], ["id", 123]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 52ms (Views: 32.0ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/animate.self-5b559948b20de4f22bb241ecc56135cd47899f3117bb0d57336a7209449c6c2a.css?body=1" for ::1 at 2015-11-20 17:38:48 -0500
+
+
+Started GET "/assets/journal.self-bde415e0f869cec940d148c1253cd98ed8ac07c707bb4e7a5321b80654e3b64f.css?body=1" for ::1 at 2015-11-20 17:38:48 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-20 17:38:48 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-20 17:38:48 -0500
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-11-20 17:38:48 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-20 17:38:48 -0500
+
+
+Started GET "/assets/picture.self-a4c4e715f17006b5b6f38e7f13eef5703aba40822ce239d4d9ffad1ebec0d332.js?body=1" for ::1 at 2015-11-20 17:38:48 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-20 17:38:48 -0500
+
+
+Started GET "/pictures?id=22" for ::1 at 2015-11-20 17:38:50 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 22]]
+  [1m[36mPicture Load (0.7ms)[0m  [1mSELECT "pictures".* FROM "pictures"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:50.175608"], ["id", 181]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:50.180021"], ["id", 135]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:50.182480"], ["id", 72]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:50.184914"], ["id", 22]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 52ms (Views: 35.8ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/journal.self-bde415e0f869cec940d148c1253cd98ed8ac07c707bb4e7a5321b80654e3b64f.css?body=1" for ::1 at 2015-11-20 17:38:50 -0500
+
+
+Started GET "/assets/animate.self-5b559948b20de4f22bb241ecc56135cd47899f3117bb0d57336a7209449c6c2a.css?body=1" for ::1 at 2015-11-20 17:38:50 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-20 17:38:50 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-20 17:38:50 -0500
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-11-20 17:38:50 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-20 17:38:50 -0500
+
+
+Started GET "/assets/picture.self-a4c4e715f17006b5b6f38e7f13eef5703aba40822ce239d4d9ffad1ebec0d332.js?body=1" for ::1 at 2015-11-20 17:38:50 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-20 17:38:50 -0500
+
+
+Started GET "/pictures?id=22" for ::1 at 2015-11-20 17:38:52 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 22]]
+  [1m[36mPicture Load (0.6ms)[0m  [1mSELECT "pictures".* FROM "pictures"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:52.079909"], ["id", 118]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:52.083141"], ["id", 26]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:52.086332"], ["id", 170]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  Rendered pictures/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 45ms (Views: 32.2ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/animate.self-5b559948b20de4f22bb241ecc56135cd47899f3117bb0d57336a7209449c6c2a.css?body=1" for ::1 at 2015-11-20 17:38:52 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-20 17:38:52 -0500
+
+
+Started GET "/assets/journal.self-bde415e0f869cec940d148c1253cd98ed8ac07c707bb4e7a5321b80654e3b64f.css?body=1" for ::1 at 2015-11-20 17:38:52 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-20 17:38:52 -0500
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-11-20 17:38:52 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-20 17:38:52 -0500
+
+
+Started GET "/assets/picture.self-a4c4e715f17006b5b6f38e7f13eef5703aba40822ce239d4d9ffad1ebec0d332.js?body=1" for ::1 at 2015-11-20 17:38:52 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-20 17:38:52 -0500
+
+
+Started GET "/pictures?id=22" for ::1 at 2015-11-20 17:38:55 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 22]]
+  [1m[35mPicture Load (0.6ms)[0m  SELECT "pictures".* FROM "pictures"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:55.327191"], ["id", 107]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:55.330538"], ["id", 78]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 22], ["updated_at", "2015-11-20 22:38:55.333671"], ["id", 4]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 45ms (Views: 31.8ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/journal.self-bde415e0f869cec940d148c1253cd98ed8ac07c707bb4e7a5321b80654e3b64f.css?body=1" for ::1 at 2015-11-20 17:38:55 -0500
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-11-20 17:38:55 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-20 17:38:55 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-20 17:38:55 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-20 17:38:55 -0500
+
+
+Started GET "/assets/animate.self-5b559948b20de4f22bb241ecc56135cd47899f3117bb0d57336a7209449c6c2a.css?body=1" for ::1 at 2015-11-20 17:38:55 -0500
+
+
+Started GET "/assets/picture.self-a4c4e715f17006b5b6f38e7f13eef5703aba40822ce239d4d9ffad1ebec0d332.js?body=1" for ::1 at 2015-11-20 17:38:55 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-20 17:38:55 -0500
+
+
+Started GET "/" for ::1 at 2015-11-20 17:54:31 -0500
+Processing by ComparisonsController#index as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "comparisons" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-11-20 22:54:31.222369"], ["updated_at", "2015-11-20 22:54:31.222369"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  Rendered comparisons/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 38ms (Views: 32.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/pictures?id=23" for ::1 at 2015-11-20 17:54:37 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mPicture Load (0.6ms)[0m  SELECT "pictures".* FROM "pictures"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 23], ["updated_at", "2015-11-20 22:54:37.168244"], ["id", 54]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 23], ["updated_at", "2015-11-20 22:54:37.171891"], ["id", 149]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 23], ["updated_at", "2015-11-20 22:54:37.174591"], ["id", 194]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 23], ["updated_at", "2015-11-20 22:54:37.177229"], ["id", 42]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 23], ["updated_at", "2015-11-20 22:54:37.181246"], ["id", 111]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 54ms (Views: 34.2ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-20 17:54:42 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YVMEP09om5SXl9CXdccFmJhVWP74DvBRa1jAKQe5X1p8keVJIsJDU8MPHak6Q6E0gU+nJtavwF0YYPXPKVjvqg==", "id"=>"111", "comparison_id"=>"23", "id1"=>"111", "id2"=>"42", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 111]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 42]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 42  [["comparison_id", 23]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 23]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 23]]
+  Rendered comparisons/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 50ms (Views: 42.3ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-20 17:54:48 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QAPZnOGvVrbqmIe41u3dNWW6OVfosghEnUq38viK/8FdwTjqjAWOcb4ASoaZaXmZfKDGj8YTOEjucoIU1mtPMQ==", "id"=>"111", "comparison_id"=>"23", "id1"=>"111", "id2"=>"194", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.2ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 111]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 194]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 194  [["comparison_id", 23]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 23]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 23]]
+  Rendered comparisons/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 41ms (Views: 34.8ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-20 17:54:52 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PVYzrhKN1drcPr5hitBa3T2/J1e+73c5omIS+LjQlzwglNLYfycNHYimc1/FVP5xJKXYj5BORzXRWiceljEnzA==", "id"=>"149", "comparison_id"=>"23", "id1"=>"111", "id2"=>"149", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.2ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 149]]
+  [1m[35mPicture Load (0.0ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 111]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 111  [["comparison_id", 23]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 23]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 23]]
+  Rendered comparisons/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 42ms (Views: 35.3ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-20 17:54:55 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sq6oVrKbmLf5BNUpeTkwNygPl4e5zUKPrQKPeshB/X2vbEkg3zFAcK2cGBc2vZSbMRVoX5dscoPeOrqc5qBNjQ==", "id"=>"54", "comparison_id"=>"23", "id1"=>"149", "id2"=>"54", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.3ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 54]]
+  [1m[35mPicture Load (0.0ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 149]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 149  [["comparison_id", 23]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 23]]
+  Rendered comparisons/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 41ms (Views: 35.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/create?utf8=%E2%9C%93&photo_url=http%3A%2F%2Fshinishikawa.com%2Fwp-content%2Fuploads%2F2015%2F08%2FKAE4637.jpg&user%5Bemail_address%5D=ian.candy%40flatironschool.com&commit=Get+your+photo" for ::1 at 2015-11-20 17:55:03 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "photo_url"=>"http://shinishikawa.com/wp-content/uploads/2015/08/KAE4637.jpg", "user"=>{"email_address"=>"ian.candy@flatironschool.com"}, "commit"=>"Get your photo"}
+Unpermitted parameter: email_address
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email_address", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email_address", "ian.candy@flatironschool.com"], ["photo_url", "http://shinishikawa.com/wp-content/uploads/2015/08/KAE4637.jpg"], ["created_at", "2015-11-20 22:55:03.680631"], ["updated_at", "2015-11-20 22:55:03.680631"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  Rendered user_mailer/result_email.html.erb within layouts/mailer (0.5ms)
+  Rendered user_mailer/result_email.text.erb within layouts/mailer (0.4ms)
+
+UserMailer#result_email: processed outbound mail in 621.4ms
+
+Sent mail to ian.candy@flatironschool.com (1819.9ms)
+Date: Fri, 20 Nov 2015 17:55:04 -0500
+From: jeffslutzky@gmail.com
+To: ian.candy@flatironschool.com
+Message-ID: <564fa4c851d9e_a463fc5fadc17482cf@Hideyukis-MacBook-Pro.local.mail>
+Subject: Your favorite photo
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_564fa4c84dab2_a463fc5fadc1748149";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_564fa4c84dab2_a463fc5fadc1748149
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+
+http://shinishikawa.com/wp-content/uploads/2015/08/KAE4637.jpg
+
+----==_mimepart_564fa4c84dab2_a463fc5fadc1748149
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Hello!</h1>
+    <p>
+      Thanks for picking your favorite photo! Here is a link to the photo you chose as your favorite:
+      
+    </p>
+  	<p>
+  		http://shinishikawa.com/wp-content/uploads/2015/08/KAE4637.jpg
+  	</p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_564fa4c84dab2_a463fc5fadc1748149--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 96991ms (ActiveRecord: 1.4ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-20 17:56:40 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PVYzrhKN1drcPr5hitBa3T2/J1e+73c5omIS+LjQlzwglNLYfycNHYimc1/FVP5xJKXYj5BORzXRWiceljEnzA==", "id"=>"111", "comparison_id"=>"23", "id1"=>"111", "id2"=>"149", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 111]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 149]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 149  [["comparison_id", 23]]
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 23]]
+  Rendered comparisons/result.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 48ms (Views: 41.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-20 17:56:40 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QAPZnOGvVrbqmIe41u3dNWW6OVfosghEnUq38viK/8FdwTjqjAWOcb4ASoaZaXmZfKDGj8YTOEjucoIU1mtPMQ==", "id"=>"194", "comparison_id"=>"23", "id1"=>"111", "id2"=>"194", "commit"=>"Pick"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 194]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 111]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 111[0m  [["comparison_id", 23]]
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 23]]
+  Rendered comparisons/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 43ms (Views: 38.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/comparisons" for ::1 at 2015-11-20 17:56:47 -0500
+Processing by ComparisonsController#index as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comparisons" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-11-20 22:56:47.779753"], ["updated_at", "2015-11-20 22:56:47.779753"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  Rendered comparisons/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 38ms (Views: 34.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/pictures?id=24" for ::1 at 2015-11-20 17:56:49 -0500
+Processing by PicturesController#index as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 24]]
+  [1m[35mPicture Load (1.0ms)[0m  SELECT "pictures".* FROM "pictures"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 24], ["updated_at", "2015-11-20 22:56:49.240812"], ["id", 191]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 24], ["updated_at", "2015-11-20 22:56:49.244004"], ["id", 78]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 24], ["updated_at", "2015-11-20 22:56:49.246545"], ["id", 117]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?[0m  [["comparison_id", 24], ["updated_at", "2015-11-20 22:56:49.249458"], ["id", 153]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pictures" SET "comparison_id" = ?, "updated_at" = ? WHERE "pictures"."id" = ?  [["comparison_id", 24], ["updated_at", "2015-11-20 22:56:49.252247"], ["id", 6]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  Rendered pictures/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 60ms (Views: 40.6ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-20 17:56:52 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AZPH0RR6WmFAKJ2P9OE1lfKQMCkPEbZMh/cRCiVdTNccUSanedCCphSwULG7ZZE564rP8SGwhkD0zyTsC7z8Jw==", "id"=>"153", "comparison_id"=>"24", "id1"=>"6", "id2"=>"153", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.2ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 24]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 153]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 6  [["comparison_id", 24]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 24]]
+  [1m[36mPicture Load (0.2ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 24]]
+  Rendered comparisons/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 44ms (Views: 36.7ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/comparisons" for ::1 at 2015-11-20 17:57:03 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D4aCIjFHcd5mrvc/wbd1mLbOmPs7dL7gQ6cOAhmjXX8SRGNUXO2pGTI2OgGOM9E0r9RnIxXVjuwwnzvkN0Ltjw==", "id"=>"153", "comparison_id"=>"24", "id1"=>"153", "id2"=>"191", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 24]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 153]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 191]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 191  [["comparison_id", 24]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 24]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 24]]
+  Rendered comparisons/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 52ms (Views: 46.9ms | ActiveRecord: 1.5ms)
