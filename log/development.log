@@ -34926,3 +34926,114 @@ Started GET "/assets/picture.self-a4c4e715f17006b5b6f38e7f13eef5703aba40822ce239
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-20 22:47:46 -0500
+
+
+Started POST "/comparisons" for ::1 at 2015-11-20 22:57:57 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BF4pZbFFsmMk4FA1UEoEnwDDOE7QXpz7JQqf9gr5qnKAUZa/ehdZO9AWM6HywQ1A0ehY6GD4S7f71Zn26FflqA==", "id"=>"119", "comparison_id"=>"27", "id1"=>"119", "id2"=>"304", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 27]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 119]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 304]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 304  [["comparison_id", 27]]
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 27]]
+  Rendered comparisons/result.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 31.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-11-20 22:57:58 -0500
+
+
+Started GET "/assets/journal.self-bde415e0f869cec940d148c1253cd98ed8ac07c707bb4e7a5321b80654e3b64f.css?body=1" for ::1 at 2015-11-20 22:57:58 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-20 22:57:58 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-20 22:57:58 -0500
+
+
+Started GET "/assets/picture.self-a4c4e715f17006b5b6f38e7f13eef5703aba40822ce239d4d9ffad1ebec0d332.js?body=1" for ::1 at 2015-11-20 22:57:58 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-20 22:57:58 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-20 22:57:58 -0500
+
+
+Started POST "/comparisons" for ::1 at 2015-11-20 22:58:14 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BF4pZbFFsmMk4FA1UEoEnwDDOE7QXpz7JQqf9gr5qnKAUZa/ehdZO9AWM6HywQ1A0ehY6GD4S7f71Zn26FflqA==", "id"=>"119", "comparison_id"=>"27", "id1"=>"119", "id2"=>"304", "commit"=>"Pick"}
+  [1m[36mComparison Load (0.1ms)[0m  [1mSELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1[0m  [["id", 27]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 119]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 304]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 304[0m  [["comparison_id", 27]]
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?[0m  [["comparison_id", 27]]
+  Rendered comparisons/result.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 33ms (Views: 30.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-11-20 22:58:14 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-20 22:58:14 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-20 22:58:14 -0500
+
+
+Started GET "/assets/animate.self-5b559948b20de4f22bb241ecc56135cd47899f3117bb0d57336a7209449c6c2a.css?body=1" for ::1 at 2015-11-20 22:58:14 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-20 22:58:14 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-20 22:58:14 -0500
+
+
+Started GET "/assets/journal.self-bde415e0f869cec940d148c1253cd98ed8ac07c707bb4e7a5321b80654e3b64f.css?body=1" for ::1 at 2015-11-20 22:58:14 -0500
+
+
+Started GET "/assets/picture.self-a4c4e715f17006b5b6f38e7f13eef5703aba40822ce239d4d9ffad1ebec0d332.js?body=1" for ::1 at 2015-11-20 22:58:14 -0500
+
+
+Started POST "/comparisons" for ::1 at 2015-11-20 22:58:28 -0500
+Processing by ComparisonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BF4pZbFFsmMk4FA1UEoEnwDDOE7QXpz7JQqf9gr5qnKAUZa/ehdZO9AWM6HywQ1A0ehY6GD4S7f71Zn26FflqA==", "id"=>"119", "comparison_id"=>"27", "id1"=>"119", "id2"=>"304", "commit"=>"Pick"}
+  [1m[35mComparison Load (0.1ms)[0m  SELECT  "comparisons".* FROM "comparisons" WHERE "comparisons"."id" = ? LIMIT 1  [["id", 27]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 119]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 304]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "pictures" SET "comparison_id" = NULL WHERE "pictures"."comparison_id" = ? AND "pictures"."id" = 304  [["comparison_id", 27]]
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pictures" WHERE "pictures"."comparison_id" = ?  [["comparison_id", 27]]
+  Rendered comparisons/result.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 34ms (Views: 30.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/animate.self-5b559948b20de4f22bb241ecc56135cd47899f3117bb0d57336a7209449c6c2a.css?body=1" for ::1 at 2015-11-20 22:58:28 -0500
+
+
+Started GET "/assets/journal.self-bde415e0f869cec940d148c1253cd98ed8ac07c707bb4e7a5321b80654e3b64f.css?body=1" for ::1 at 2015-11-20 22:58:28 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-20 22:58:28 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-20 22:58:28 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-20 22:58:28 -0500
+
+
+Started GET "/assets/picture.self-a4c4e715f17006b5b6f38e7f13eef5703aba40822ce239d4d9ffad1ebec0d332.js?body=1" for ::1 at 2015-11-20 22:58:28 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-20 22:58:28 -0500
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-11-20 22:58:28 -0500
