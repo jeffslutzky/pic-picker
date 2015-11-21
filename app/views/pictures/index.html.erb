@@ -5,27 +5,35 @@
 
 <h1 class="hide-font2">Which is your favorite?	</h1>
 
-<div class="hide-space">
+
+
+<table>
 <%=form_tag(comparisons_path) do %>
+<tr>
+  <td>
+    <img class="animated bounceInRight " src="<%=@selected_pics[0].photo_url%>" style="width:320px;">
+  </td>
+  <td>
+    <img class="animated bounceInLeft" src="<%=@selected_pics[1].photo_url%>" style="width:320px;">
+  </td>
+</tr>
+<tr>
+  <td>
+    <%= radio_button_tag :id, @selected_pics[0].id%>
+  </td>
+  <td>
+    <%= radio_button_tag :id, @selected_pics[1].id%>
+  </td>
+</tr>
 
-<img class="animated bounceInRight " src="<%=@selected_pics[0].photo_url%>" style="width:320px;">
-<img class="animated bounceInLeft" src="<%=@selected_pics[1].photo_url%>" style="width:320px;">
 
-<div>
 
-<%= radio_button_tag :id, @selected_pics[0].id%>
-<%=label_tag(:id, "this one")%>
 
-<%= radio_button_tag :id, @selected_pics[1].id%>
-<%=label_tag(:id, "this one")%>
-</div>
+</table>
+<%=submit_tag("Submit", :class=>"hide-btn")%>
+<%end%>
+</center>
 
 <%= hidden_field_tag 'comparison_id', @selected_pics[0].comparison_id %>
 <%= hidden_field_tag 'id1', @selected_pics[0].id %>
 <%= hidden_field_tag 'id2', @selected_pics[1].id %>
-
-<%=submit_tag("Pick", :class=>"hide-btn")%>
-</div>
-
-<%end%>
-</center>

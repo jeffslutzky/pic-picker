@@ -6,6 +6,7 @@ class ComparisonsController < ApplicationController
   end
 
   def create
+    binding.pry
     comparison = Comparison.find(params[:comparison_id])
     session_pics = comparison.pictures
     if  params[:id] == params['id1']
