@@ -50,3 +50,12 @@
    td {
      text-align:center
    }
+
+   img {
+     border: 15px solid transparent;
+  padding: 10px 20px;
+  -moz-border-image:url("/files/4127/border.png") 30 30 repeat; /* Old Firefox */
+  -webkit-border-image:url("/files/4127/border.png") 30 30 repeat; /* Safari */
+  -o-border-image:url("/files/4127/border.png") 30 30 repeat; /* Opera */
+  border-image:url("/files/4127/border.png") 30 30 repeat;
+   }
