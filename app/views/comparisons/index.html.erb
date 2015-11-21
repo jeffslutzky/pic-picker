@@ -3,8 +3,10 @@
 
 <body>
 
-<h2>Welcome to our website!</h2>
-<%=@comparison.id%>
+<h2>Welcome to PicPicker.</h2>
+<p>We'll show you ten randomly-generated photos. You get to pick your favorite.</p>
+<p>You'll be shown two photos at a time. Pick which one you like better, and we'll replace the other one with a new photo. Pick your favorite from this new pair and repeat until you've seen all ten photos. At the end, we'll e-mail you the photo you liked most.</p>
+<p>Click "Start" to begin!</p>
 <form action="/pictures" method="GET">
 <input type="hidden" name="id" value="<%=@comparison.id%>">
 <button type="submit">Start</button>

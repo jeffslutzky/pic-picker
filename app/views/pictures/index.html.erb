@@ -1,5 +1,5 @@
 <center>
-<h2>Picture</h2>
+<h2>Which is your favorite?	</h2>
 
 <%=form_tag(comparisons_path) do %>
 
@@ -10,10 +10,10 @@
 
 <div>
 <%= radio_button_tag :id, @selected_pics[0].id  %>
-<%=label_tag(:id, "Like it better")%>
+<%=label_tag(:id, "this one", class: "choice")%>
 
 <%= radio_button_tag :id, @selected_pics[1].id %>
-<%=label_tag(:id, "Like it better")%>
+<%=label_tag(:id, "this one")%>
 </div>
 
 <%= hidden_field_tag 'comparison_id', @selected_pics[0].comparison_id %>
