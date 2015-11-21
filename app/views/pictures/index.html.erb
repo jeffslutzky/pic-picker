@@ -1,18 +1,22 @@
 <center>
-<h2>Which is your favorite?	</h2>
+  <nav class="navbar navbar-default">
+    <h1 class="hide-font">PicPicker</h1>
+  </nav>
 
+<h1 class="hide-font2">Which is your favorite?	</h1>
+
+<div class="hide-space">
 <%=form_tag(comparisons_path) do %>
 
-<img class="animated bounceInRight" src="<%=@selected_pics[0].photo_url%>" style="width:304px;">
-
-
-<img class="animated bounceInLeft" src="<%=@selected_pics[1].photo_url%>" style="width:304px;">
+<img class="animated bounceInRight " src="<%=@selected_pics[0].photo_url%>" style="width:320px;">
+<img class="animated bounceInLeft" src="<%=@selected_pics[1].photo_url%>" style="width:320px;">
 
 <div>
-<%= radio_button_tag :id, @selected_pics[0].id  %>
-<%=label_tag(:id, "this one", class: "choice")%>
 
-<%= radio_button_tag :id, @selected_pics[1].id %>
+<%= radio_button_tag :id, @selected_pics[0].id%>
+<%=label_tag(:id, "this one")%>
+
+<%= radio_button_tag :id, @selected_pics[1].id%>
 <%=label_tag(:id, "this one")%>
 </div>
 
@@ -20,9 +24,7 @@
 <%= hidden_field_tag 'id1', @selected_pics[0].id %>
 <%= hidden_field_tag 'id2', @selected_pics[1].id %>
 
-<div>
-
-<%=submit_tag("Pick")%>
+<%=submit_tag("Pick", :class=>"hide-btn")%>
 </div>
 
 <%end%>
