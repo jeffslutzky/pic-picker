@@ -1,21 +1,20 @@
 <center>
+  <nav class="navbar navbar-default">
+    <h1 class="hide-font">PicPicker</h1>
+  </nav>
 
-
-<h2>Excellent choice!<br />
-Get a link to this photo via e-mail.</h2>
-
-
-
+<h1 class="hide-font2">Excellent choice!</h1>
+<h2 class="hide-font3">Please enter your e-mail address below.</h2>
 <div>
 
 <!-- create a /mail route which will go to the controller - that controller method will call the mailer -->
 
 <%= form_tag("users/create", method: "get") do %>
-<img class="animated bounceInLeft" src="<%=@picture_chosen.photo_url%>" style="width:304px;">
+<img class="animated zoomInUp" src="<%=@picture_chosen.photo_url%>" style="width:304px;">
 <div>
 	<%= hidden_field_tag(:photo_url, @picture_chosen.photo_url) %>
-	<%= email_field(:user, :email_address) %>
-	<%= submit_tag("Get your photo") %>
+	<%= email_field(:user, :email_address, :class=> "hide-email", :placeholder => "enter your e-mail address") %>
+	<%= submit_tag("Submit", :class=>"hide-btn")%>
 <% end %>
 </div>
 <center>

@@ -5,26 +5,25 @@
 
 <h1 class="hide-font2">Which is your favorite?	</h1>
 
-
 <%=form_tag(comparisons_path) do %>
-<table>
-  <tr>
-    <td>
-      <img class="animated bounceInRight " src="<%=@selected_pics[0].photo_url%>" style="width:320px;">
-    </td>
-    <td>
-      <img class="animated bounceInLeft" src="<%=@selected_pics[1].photo_url%>" style="width:320px;">
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <%= radio_button_tag :id, @selected_pics[0].id%>
-    </td>
-    <td>
-      <%= radio_button_tag :id, @selected_pics[1].id%>
-    </td>
-  </tr>
-</table>
+  <table>
+    <tr>
+      <td>
+        <img class="animated bounceInRight " src="<%=@selected_pics[0].photo_url%>" style="width:330px;">
+      </td>
+      <td>
+        <img class="animated bounceInLeft" src="<%=@selected_pics[1].photo_url%>" style="width:330px;">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= radio_button_tag :id, @selected_pics[0].id%>
+      </td>
+      <td>
+        <%= radio_button_tag :id, @selected_pics[1].id%>
+      </td>
+    </tr>
+  </table>
 <%= hidden_field_tag 'comparison_id', @selected_pics[0].comparison_id %>
 <%= hidden_field_tag 'id1', @selected_pics[0].id %>
 <%= hidden_field_tag 'id2', @selected_pics[1].id %>

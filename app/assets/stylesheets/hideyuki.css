@@ -36,11 +36,16 @@
    .hide-font2 {
      font-size: 2.5em;
      margin-bottom: 20px;
-
    }
 
+   .hide-font3 {
+     font-size: 1.5em;
+     margin-bottom: 20px;
+   }
+
+
    .hide-space {
-     margin-top: 10px;
+     margin-top: 30px;
    }
 
    .hide-border {
@@ -48,14 +53,22 @@
    }
 
    td {
-     text-align:center
+     text-align:center;
+     margin: 20px;
    }
 
-   img {
-     border: 15px solid transparent;
-  padding: 10px 20px;
-  -moz-border-image:url("/files/4127/border.png") 30 30 repeat; /* Old Firefox */
-  -webkit-border-image:url("/files/4127/border.png") 30 30 repeat; /* Safari */
-  -o-border-image:url("/files/4127/border.png") 30 30 repeat; /* Opera */
-  border-image:url("/files/4127/border.png") 30 30 repeat;
-   }
+   table {
+     border-spacing: 30px;
+  }
+
+  .hide-email {
+    width: 300px;
+    padding: 5px;
+    border: ridge 5px #c9c9c9;
+    transition: border 0.3s;
+  }
+
+  .hide-center {
+    width: 600px;
+    margin: auto;
+  }

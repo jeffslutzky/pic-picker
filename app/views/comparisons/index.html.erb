@@ -6,7 +6,6 @@
 -->
 <html>
 	<head>
-		<title>Aerial by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -22,27 +21,22 @@
 				<!-- Header -->
 					<header id="header">
 						<h1>Pic Picker</h1>
-						<p>We'll show you ten randomly-generated photos. You get to pick your favorite. You'll be shown two photos at a time.
+						<div class="hide-center">
+							<p style="font-size: 1.5em">You'll be shown two photos at a time.
 							Pick which one you like better, and we'll replace the other one with a new photo. Pick your favorite from this new pair and repeat until you've seen all ten photos.
 							At the end, we'll e-mail you the photo you liked most.Click "Start" to begin!</p>
-						<nav>
-							<ul>
-								<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-								<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-								<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-							</ul>
-						</nav>
-						<form action="/pictures" method="GET">
-						<input type="hidden" name="id" value="<%=@comparison.id%>">
-						<button class="hide-btn" type="submit">Start</button>
-						</form>
+						<div class="hide-space">
+							<form action="/pictures" method="GET">
+								<input type="hidden" name="id" value="<%=@comparison.id%>">
+								<button class="hide-btn" type="submit">Start</button>
+							</form>
+						</div>
+					</div>
 					</header>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<span class="copyright">&copy; Untitled. Design: <a href="http://dymeapp.com">Hideyuki Gojima</a>.</span>
+					
 					</footer>
 
 			</div>
