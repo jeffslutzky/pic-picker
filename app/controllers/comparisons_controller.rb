@@ -18,7 +18,6 @@ class ComparisonsController < ApplicationController
           @second_pic = comparison.pic_picker(session_pics)[0]
       end
         render 'show'
-      end
     end
   end
 
