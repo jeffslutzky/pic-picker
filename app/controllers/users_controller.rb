@@ -6,7 +6,6 @@ def create
     	@user.email_address = params[:user][:email_address]
       @user.photo_url = params[:photo_url]
       if @user.save
-        # Tell the UserMailer to send a welcome email after save
         UserMailer.result_email(@user).deliver_now
         format.html { redirect_to(root_path, notice: 'Favorite photo chosen') }
         format.json { render json: root_path, status: :created, location: @user }
