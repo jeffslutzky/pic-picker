@@ -23,11 +23,10 @@ class ComparisonsController < ApplicationController
 
   def remove_disliked_photo_from_array(params, session_pics)
     if params[:id] == params['id1']
-      picture_not_chosen = Picture.find(params['id2'])
+      session_pics.delete(Picture.find(params['id2']))
     else
-      picture_not_chosen = Picture.find(params['id1'])
+      session_pics.delete(Picture.find(params['id1']))
     end
-    session_pics.delete(picture_not_chosen)
   end 
 
 end
