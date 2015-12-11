@@ -8,7 +8,6 @@ def create
       if @user.save
         # Tell the UserMailer to send a welcome email after save
         UserMailer.result_email(@user).deliver_now
-        # binding.pry
         format.html { redirect_to(root_path, notice: 'Favorite photo chosen') }
         format.json { render json: root_path, status: :created, location: @user }
       else
