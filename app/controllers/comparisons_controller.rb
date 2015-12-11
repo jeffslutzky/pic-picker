@@ -8,8 +8,8 @@ class ComparisonsController < ApplicationController
   def create
     comparison = Comparison.find(params[:comparison_id])
     session_pics = comparison.pictures
-    save_preferred_photo(params, session_pics)
-
+    @picture_chosen = Picture.find(params[:id])
+    remove_disliked_photo(params, session_pics)
     if comparison.pictures.count == 1
       render 'result'
     else
@@ -21,16 +21,13 @@ class ComparisonsController < ApplicationController
       end
     end
 
-  def save_preferred_photo(params, session_pics)
+  def remove_disliked_photo(params, session_pics)
     if params[:id] == params['id1']
-      @picture_chosen = Picture.find(params['id1'])
       picture_not_chosen = Picture.find(params['id2'])
     else
-      @picture_chosen = Picture.find(params['id2'])
       picture_not_chosen = Picture.find(params['id1'])
     end
     session_pics.delete(picture_not_chosen)
-    @picture_chosen
   end 
 
 end
