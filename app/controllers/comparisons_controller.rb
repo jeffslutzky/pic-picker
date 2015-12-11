@@ -20,6 +20,7 @@ class ComparisonsController < ApplicationController
         render 'show'
       end
     end
+  end
 
   def remove_disliked_photo_from_array(params, session_pics)
     if params[:id] == params['id1']
