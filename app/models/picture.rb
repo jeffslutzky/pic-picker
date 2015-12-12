@@ -3,7 +3,6 @@
 # Table name: pictures
 #
 #  id          :integer          not null, primary key
-#  favroite_id :integer
 #  photo_url   :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
@@ -30,7 +29,7 @@ class Picture < ActiveRecord::Base
   end
 
   def self.session_pics
-    session_pics = Picture.all.shuffle.slice(0..4)
+    session_pics = Picture.all.shuffle.slice(0..9)
   end
 
 
