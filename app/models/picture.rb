@@ -10,7 +10,6 @@
 
 require 'nokogiri'
 require 'open-uri'
-require 'pry'
 
 class Picture < ActiveRecord::Base
   belongs_to :favorite
